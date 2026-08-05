@@ -1,0 +1,14 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary / Scratch Files
+scratch/
+*.pyc
+__pycache__/
+
+# Local Environment / IDE
+.vscode/
+.idea/
+.project
+.settings/

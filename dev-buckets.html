@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stackly Developer Console - Distributed Storage Bucket Clusters & Replica Nodes.">
+  <title>Bucket Clusters | Developer Console</title>
+  
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- --- DASHBOARD FULL WORKSPACE --- -->
+  <div class="dashboard-layout">
+    
+    <!-- --- LEFT SIDEBAR DRAWER (DEVELOPER MODE) --- -->
+    <aside class="dashboard-sidebar">
+      <div style="width: 100%;">
+        <a href="index.html" class="dashboard-sidebar-logo" style="border-bottom: none; padding: 0;">
+          <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img">
+        </a>
+        <ul class="dashboard-sidebar-menu">
+          <li>
+            <a href="dev-dashboard.html">
+              <i class="fa-solid fa-code"></i> API &amp; Webhooks
+            </a>
+          </li>
+          <li>
+            <a href="dev-buckets.html" class="active">
+              <i class="fa-solid fa-cubes"></i> Bucket Clusters
+            </a>
+          </li>
+          <li>
+            <a href="dev-tokens.html">
+              <i class="fa-solid fa-key"></i> API Access Tokens
+            </a>
+          </li>
+          <li>
+            <a href="index.html">
+              <i class="fa-solid fa-globe"></i> Main Portal
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="dashboard-sidebar-footer">
+        <a href="login.html">
+          <i class="fa-solid fa-power-off"></i> Logout
+        </a>
+      </div>
+    </aside>
+
+    <!-- --- MAIN CONTENT CONSOLE --- -->
+    <div class="dashboard-main">
+      
+      <!-- --- STICKY CONSOLE HEADER --- -->
+      <header class="dashboard-header">
+        <div class="dashboard-header-left">
+          <button class="dashboard-toggle" aria-label="Open Sidebar Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="dashboard-breadcrumb">
+            Developer Console / <span>Bucket Clusters</span>
+          </div>
+        </div>
+        
+        <div class="dashboard-header-right">
+          <div class="dashboard-user-profile">
+            <img src="assets/avatar_elena.webp" alt="Elena Rostova">
+            <span>Elena Rostova (Dev)</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- --- SCROLLABLE WORKSPACE CONTENT --- -->
+      <main class="dashboard-content">
+        
+        <!-- --- BUCKETS REGIONS GRID --- -->
+        <h3 style="color: #fff; font-size: 1.05rem; margin-bottom: 1rem; font-family: var(--font-title);">Active Replicated Storage Buckets</h3>
+        <div class="dashboard-metrics-grid" style="margin-bottom: 2rem;">
+          <!-- Bucket 1 -->
+          <div class="dashboard-metric-card" style="border-top: 3px solid var(--accent-cyan);">
+            <h4>US-West Primary Storage</h4>
+            <div class="metric-val" style="font-size: 1.4rem; margin-top: 0.5rem;">Hot Bucket</div>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Region: <strong>Oregon (USA)</strong></p>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Avg Latency: <strong style="color: #10b981;">12ms</strong></p>
+            <div class="metric-sub">Replication factor: <strong>6 node hosts</strong></div>
+          </div>
+          
+          <!-- Bucket 2 -->
+          <div class="dashboard-metric-card" style="border-top: 3px solid var(--accent-purple);">
+            <h4>EU-Central Archive Vault</h4>
+            <div class="metric-val" style="font-size: 1.4rem; margin-top: 0.5rem;">Glacier Vault</div>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Region: <strong>Frankfurt (GER)</strong></p>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Avg Latency: <strong>45ms</strong></p>
+            <div class="metric-sub">Replication factor: <strong>4 node hosts</strong></div>
+          </div>
+
+          <!-- Bucket 3 -->
+          <div class="dashboard-metric-card" style="border-top: 3px solid #10b981;">
+            <h4>Asia-Pacific Hot Cache</h4>
+            <div class="metric-val" style="font-size: 1.4rem; margin-top: 0.5rem;">Redis Cluster</div>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Region: <strong>Singapore (SGP)</strong></p>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Avg Latency: <strong style="color: #10b981;">8ms</strong></p>
+            <div class="metric-sub">Replication factor: <strong>3 node hosts</strong></div>
+          </div>
+        </div>
+
+        <!-- --- OBJECT STATISTICS LIST --- -->
+        <div class="dashboard-card">
+          <div class="dashboard-card-header">
+            <h3>Object Transactions Ledger</h3>
+            <button class="btn btn-secondary btn-sm" style="padding: 0.35rem 0.8rem; font-size: 0.75rem;" onclick="alert('Consensus sync requested. Node cluster status updated.')"><i class="fa-solid fa-arrows-rotate"></i> Sync Nodes</button>
+          </div>
+          <div class="dashboard-table-wrapper">
+            <table class="dashboard-table">
+              <thead>
+                <tr>
+                  <th>Object ID</th>
+                  <th>Associated Bucket</th>
+                  <th>Encrypted Slices</th>
+                  <th>Payload Size</th>
+                  <th>Uptime Index</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code style="color: var(--accent-cyan);">obj_8a3f912cde4</code></td>
+                  <td>US-West Primary Storage</td>
+                  <td>12 slices</td>
+                  <td>12.4 MB</td>
+                  <td><span class="status-badge">100% active</span></td>
+                </tr>
+                <tr>
+                  <td><code style="color: var(--accent-cyan);">obj_19ac04db9ff</code></td>
+                  <td>US-West Primary Storage</td>
+                  <td>12 slices</td>
+                  <td>4.6 KB</td>
+                  <td><span class="status-badge">100% active</span></td>
+                </tr>
+                <tr>
+                  <td><code style="color: var(--accent-cyan);">obj_bb408d66ef2</code></td>
+                  <td>Asia-Pacific Hot Cache</td>
+                  <td>3 slices</td>
+                  <td>8.2 KB</td>
+                  <td><span class="status-badge">100% active</span></td>
+                </tr>
+                <tr>
+                  <td><code style="color: var(--accent-cyan);">obj_f128cba47e9</code></td>
+                  <td>EU-Central Archive Vault</td>
+                  <td>4 slices</td>
+                  <td>1.4 GB</td>
+                  <td><span class="status-badge">100% active</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </main>
+    </div>
+
+  </div>
+
+  <!-- JavaScript Link -->
+  <script src="script.js"></script>
+</body>
+</html>

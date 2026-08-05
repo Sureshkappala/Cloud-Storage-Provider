@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stackly Decentralized Console - Storage metrics, active node connections, recent upload logs, and key credentials settings.">
+  <title>Dashboard Console | Stackly Premium Cloud Storage</title>
+  
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- --- DASHBOARD FULL WORKSPACE --- -->
+  <div class="dashboard-layout">
+    
+    <!-- --- LEFT SIDEBAR DRAWER --- -->
+    <aside class="dashboard-sidebar">
+      <div style="width: 100%;">
+        <a href="index.html" class="dashboard-sidebar-logo" style="border-bottom: none; padding: 0;">
+          <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img">
+        </a>
+        <ul class="dashboard-sidebar-menu">
+          <li>
+            <a href="dashboard.html" class="active">
+              <i class="fa-solid fa-gauge"></i> Overview
+            </a>
+          </li>
+          <li>
+            <a href="dashboard-files.html">
+              <i class="fa-solid fa-folder-open"></i> Storage Files
+            </a>
+          </li>
+          <li>
+            <a href="dashboard-settings.html">
+              <i class="fa-solid fa-shield-halved"></i> Credentials &amp; MFA
+            </a>
+          </li>
+          <li>
+            <a href="index.html">
+              <i class="fa-solid fa-globe"></i> Main Portal
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="dashboard-sidebar-footer">
+        <a href="login.html">
+          <i class="fa-solid fa-power-off"></i> Logout
+        </a>
+      </div>
+    </aside>
+
+    <!-- --- MAIN CONTENT CONSOLE --- -->
+    <div class="dashboard-main">
+      
+      <!-- --- STICKY CONSOLE HEADER --- -->
+      <header class="dashboard-header">
+        <div class="dashboard-header-left">
+          <button class="dashboard-toggle" aria-label="Open Sidebar Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="dashboard-breadcrumb">
+            Console / <span>Overview</span>
+          </div>
+        </div>
+        
+        <div class="dashboard-header-right">
+          <div class="dashboard-user-profile">
+            <img src="assets/avatar_sarah.webp" alt="Sarah Jenkins">
+            <span>Sarah Jenkins</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- --- SCROLLABLE WORKSPACE CONTENT --- -->
+      <main class="dashboard-content">
+        
+        <!-- --- ROW 1: QUICK METRICS CARDS --- -->
+        <div class="dashboard-metrics-grid">
+          <!-- Card 1: Storage -->
+          <div class="dashboard-metric-card">
+            <h4>Storage Capacity</h4>
+            <div class="metric-val">456.8 GB</div>
+            <div class="progress-bar">
+              <div class="progress-bar-fill" style="width: 45.6%;"></div>
+            </div>
+            <div class="metric-sub">Used: <strong>45.6%</strong> of 1,000 GB SLA limit</div>
+          </div>
+          
+          <!-- Card 2: SLA Status -->
+          <div class="dashboard-metric-card">
+            <h4>Network Uptime</h4>
+            <div class="metric-val" style="color: #10b981;">99.999%</div>
+            <div class="progress-bar">
+              <div class="progress-bar-fill" style="width: 100%; background: #10b981;"></div>
+            </div>
+            <div class="metric-sub">Connected: <strong>12/12</strong> regional node sectors</div>
+          </div>
+
+          <!-- Card 3: Performance -->
+          <div class="dashboard-metric-card">
+            <h4>Avg Sync Latency</h4>
+            <div class="metric-val" style="color: var(--accent-purple);">14.5ms</div>
+            <div class="progress-bar">
+              <div class="progress-bar-fill" style="width: 75%; background: var(--accent-purple);"></div>
+            </div>
+            <div class="metric-sub">Consensus status: <strong>US-West optimal</strong></div>
+          </div>
+
+          <!-- Card 4: Keys connected -->
+          <div class="dashboard-metric-card">
+            <h4>Certified Keys</h4>
+            <div class="metric-val">FIDO2 Active</div>
+            <div class="progress-bar">
+              <div class="progress-bar-fill" style="width: 100%;"></div>
+            </div>
+            <div class="metric-sub">Security keys registered: <strong>2 tokens</strong></div>
+          </div>
+        </div>
+
+        <!-- --- ROW 2: FILE UPLOAD ZONE & RECENT ACTIVITY --- -->
+        <div class="dashboard-grid">
+          
+          <!-- Left: Recent files table -->
+          <div class="dashboard-card">
+            <div class="dashboard-card-header">
+              <h3>Recent Decrypted File Actions</h3>
+              <a href="dashboard-files.html" class="btn btn-secondary btn-sm" style="padding: 0.35rem 0.8rem; font-size: 0.75rem;">View All Explorer</a>
+            </div>
+            <div class="dashboard-table-wrapper">
+              <table class="dashboard-table">
+                <thead>
+                  <tr>
+                    <th>Filename</th>
+                    <th>Size</th>
+                    <th>Date Uploaded</th>
+                    <th>Parity Nodes</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="file-name-cell">
+                        <i class="fa-solid fa-file-pdf"></i>
+                        <span>Q4_Financials_Encrypted.pdf</span>
+                      </div>
+                    </td>
+                    <td>12.4 MB</td>
+                    <td>2 hours ago</td>
+                    <td>12/12 active</td>
+                    <td><span class="status-badge">Operational</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="file-name-cell">
+                        <i class="fa-solid fa-file-image"></i>
+                        <span>avatar_sarah.webp</span>
+                      </div>
+                    </td>
+                    <td>4.6 KB</td>
+                    <td>1 day ago</td>
+                    <td>12/12 active</td>
+                    <td><span class="status-badge">Operational</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="file-name-cell">
+                        <i class="fa-solid fa-file-code"></i>
+                        <span>Dev_Stack_Configuration.yml</span>
+                      </div>
+                    </td>
+                    <td>8.2 KB</td>
+                    <td>2 days ago</td>
+                    <td>12/12 active</td>
+                    <td><span class="status-badge">Operational</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="file-name-cell">
+                        <i class="fa-solid fa-file-zipper"></i>
+                        <span>Database_Backup_V3.tar.gz</span>
+                      </div>
+                    </td>
+                    <td>1.4 GB</td>
+                    <td>3 days ago</td>
+                    <td>12/12 active</td>
+                    <td><span class="status-badge">Operational</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Right: Upload console -->
+          <div class="dashboard-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="dashboard-card-header">
+              <h3>Upload &amp; Fragment File</h3>
+            </div>
+            <div class="dashboard-upload-zone" onclick="alert('Upload system simulation: File fragmented into 12 encrypted block slices and replicated successfully over global nodes.')">
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+              <h4>Drag and drop target here</h4>
+              <p>Or click to select from local directories</p>
+              <span style="font-size: 0.75rem; color: var(--text-secondary);">Max size: 4.8 GB per sector transaction</span>
+            </div>
+            <div style="margin-top: 1.5rem; text-align: center;">
+              <span style="font-size: 0.8rem; color: var(--text-secondary);">
+                <i class="fa-solid fa-lock" style="color: var(--accent-cyan); margin-right: 4px;"></i> Client-side zero-knowledge encryption active
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+      </main>
+    </div>
+
+  </div>
+
+  <!-- JavaScript Link -->
+  <script src="script.js"></script>
+</body>
+</html>

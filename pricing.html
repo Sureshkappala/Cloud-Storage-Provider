@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stackly Pricing - Monthly and yearly plans, personal storage limits, Pro tiers, enterprise quotas, and FAQs.">
+  <title>Pricing Plans | Stackly Premium Cloud Storage</title>
+  
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+  <!-- --- 1. STICKY NAVIGATION BAR WITH MOBILE DRAWER --- -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img">
+      </a>
+      
+      <!-- Drawer Menu (acts as navbar on desktop and mobile drawer) -->
+      <nav class="navbar">
+        <div class="drawer-header">
+          <a href="index.html" class="logo">
+            <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img">
+          </a>
+          <button class="drawer-close" aria-label="Close Menu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        
+        <div class="drawer-search">
+          <div style="position: relative; width: 100%;">
+            <input type="text" placeholder="Search resources..." onkeyup="if(event.key === 'Enter') { window.location.href='resources.html#blog'; }">
+            <i class="fa-solid fa-magnifying-glass" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-secondary); pointer-events: none;"></i>
+          </div>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-home">Home</a></li>
+          <li><a href="about.html" class="nav-about">About</a></li>
+          <li><a href="solutions.html" class="nav-solutions">Solutions</a></li>
+          <li><a href="features.html" class="nav-features">Features</a></li>
+          <li><a href="pricing.html" class="nav-pricing active">Pricing</a></li>
+          <li><a href="resources.html" class="nav-resources">Resources</a></li>
+          <li><a href="contact.html" class="nav-contact">Contact</a></li>
+        </ul>
+        
+        <div class="nav-mobile-cta">
+          <a href="login.html" class="btn btn-secondary">Login</a>
+          <a href="contact.html" class="btn btn-primary">Start Free Trial</a>
+        </div>
+        
+        <div class="drawer-contact-info">
+          <h5>Contact Info</h5>
+          <p><i class="fa-solid fa-phone"></i> +1 (800) 555-STACK</p>
+          <p><i class="fa-solid fa-envelope"></i> support@stackly.storage</p>
+          <p><i class="fa-solid fa-location-dot"></i> 100 Wall Street, 28th Floor, New York, NY 10005</p>
+        </div>
+      </nav>
+      
+      <div class="nav-controls">
+        <a href="login.html" class="btn btn-secondary btn-sm"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+        <a href="contact.html" class="btn btn-primary btn-sm">Start Free Trial</a>
+        <button class="menu-toggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- --- 2. TITLE BANNER --- -->
+  <section class="section" style="padding-top: 10rem; padding-bottom: 3rem; background: #0c101b; border-bottom: 1px solid #1e293b;">
+    <div class="container" style="text-align: center;">
+      <span class="section-tag">Flexible Subscriptions</span>
+      <h1 class="subpage-title">Storage Tiers</h1>
+      <p style="max-width: 600px; margin: 0 auto; color: var(--text-secondary);">
+        Select a storage plan below. Transparent yearly pricing structures with zero hidden usage fees.
+      </p>
+    </div>
+  </section>
+
+  <!-- --- 3. PRICING PLANS --- -->
+  <section id="plans" class="section">
+    <div class="container">
+      <div class="plans-toggle-container reveal active">
+        <span class="toggle-label lbl-monthly active">Monthly Billing</span>
+        <div class="toggle-switch">
+          <div class="toggle-circle"></div>
+        </div>
+        <span class="toggle-label lbl-yearly">Yearly Billing (Save 20%)</span>
+      </div>
+
+      <div class="plans-grid">
+        <!-- Card 1 -->
+        <div class="glass-card plan-card reveal active" data-plan="personal">
+          <div class="plan-header">
+            <h3 class="plan-name">Personal Vault</h3>
+            <div class="plan-price-container">
+              <span class="plan-currency">$</span>
+              <span class="plan-price">5</span>
+              <span class="plan-period">/ month</span>
+            </div>
+          </div>
+          <div class="plan-features">
+            <div class="plan-feature-line">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>100 GB Cloud Storage</span>
+            </div>
+            <div class="plan-feature-line">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Military AES-256 Encryption</span>
+            </div>
+            <div class="plan-feature-line">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Access on 2 Devices</span>
+            </div>
+            <div class="plan-feature-line">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Unlimited Sharing Links</span>
+            </div>
+          </div>
+          <a href="contact.html" class="btn btn-secondary">Get Started</a>
+        </div>
+
+        <!-- Card 2 (Popular) -->
+        <div class="glass-card plan-card popular reveal active" data-plan="professional" style="animation-delay: 0.1s;">
+          <div class="plan-badge">Most Popular</div>
+          <div class="plan-header">
+            <h3 class="plan-name">Pro Vault</h3>
+            <div class="plan-price-container">
+              <span class="plan-currency">$</span>
+              <span class="plan-price">12</span>
+              <span class="plan-period">/ month</span>
+            </div>
+          </div>
+          <div class="plan-features">
+            <div class="plan-feature-line">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>2 TB Ultra Cloud Storage</span>
+            </div>
+            <div class="plan-feature-line">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Zero-Knowledge Protocols</span>
+            </div>
+            <div class="plan-feature-line">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Unlimited Device Connections</span>
+            </div>
+            <div class="plan-feature-line">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Priority High Availability Nodes</span>
+            </div>
+            <div class="plan-feature-line">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>180-Day Version Backups</span>
+            </div>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Start Pro Free Trial</a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="glass-card plan-card reveal active" data-plan="enterprise" style="animation-delay: 0.2s;">
+          <div class="plan-header">
+            <h3 class="plan-name">Enterprise Vault</h3>
+            <div class="plan-price-container">
+              <span class="plan-currency">$</span>
+              <span class="plan-price">29</span>
+              <span class="plan-period">/ month</span>
+            </div>
+          </div>
+          <div class="plan-features">
+            <div class="plan-feature-line">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>10 TB Encrypted Space</span>
+            </div>
+            <div class="plan-feature-line">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Custom Active Directory Sync</span>
+            </div>
+            <div class="plan-feature-line">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Dedicated Account Engineer</span>
+            </div>
+            <div class="plan-feature-line">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Custom Data Migration Protocol</span>
+            </div>
+            <div class="plan-feature-line">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Unlimited Versions Log History</span>
+            </div>
+          </div>
+          <a href="contact.html" class="btn btn-secondary">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- 4. FREQUENTLY ASKED QUESTIONS --- -->
+  <section id="faq" class="section" style="border-top: 1px solid #1e293b;">
+    <div class="container">
+      <div class="section-header reveal active">
+        <span class="section-tag">Need Assistance?</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-desc">Have questions about our technology? Check our answers below.</p>
+      </div>
+
+      <div class="faq-accordion reveal active">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What is zero-knowledge encryption?</span>
+            <div class="faq-arrow">
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>Zero-knowledge encryption is a standard security design where the service provider has zero information about the files and keys stored. The data is encrypted before leaving your devices, meaning no unauthorized personnel or database administrators can ever read or look into your files.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How does real-time synchronization work?</span>
+            <div class="faq-arrow">
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>Our native synchronization client monitors file libraries for changes. When modifications happen, only the small delta bits (the altered parts of the document) are compressed, encrypted, and uploaded. This block-level delta sync engine cuts bandwidth waste and uploads changes instantly.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Can I share files with non-Stackly users?</span>
+            <div class="faq-arrow">
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>Yes. You can generate secure, encrypted public sharing link keys. You can also specify access limits such as download limits, custom expiration dates, and password protection triggers. Recipient parties can download files directly from their browsers without setting up an account.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What happens if I exceed my plan's storage limit?</span>
+            <div class="faq-arrow">
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>If you approach your storage threshold, you will receive an automatic email warning. If you exceed the limits, you can continue accessing and downloading files, but sync uploads will pause until you upgrade to a higher tier or free up space in your folders.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- --- FOOTER --- -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom: 1.25rem;">
+            <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img">
+          </a>
+          <p class="footer-desc">
+            Premium next-generation decentralized cloud storage provider. Zero-knowledge encryption, real-time sync, and ultimate security.
+          </p>
+          <div class="social-links">
+            <a href="404.html" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="404.html" class="social-link" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="404.html" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="solutions.html" class="footer-link">Our Solutions</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing Plans</a></li>
+            <li><a href="about.html" class="footer-link">About Stackly</a></li>
+            <li><a href="features.html" class="footer-link">Features Log</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html" class="footer-link">Contact Coordinates</a></li>
+            <li><a href="pricing.html#faq" class="footer-link">Terms & Agreements</a></li>
+            <li><a href="about.html" class="footer-link">Security Audits</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p style="margin-bottom: 1.25rem;">
+            Get quarterly cloud storage updates and exclusive early-bird product announcements.
+          </p>
+          <div class="footer-newsletter-wrap">
+            <input type="email" placeholder="Your Email">
+            <button type="button">Join</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Stackly Storage Corp. All rights reserved. Designed for secure cloud storage.</p>
+        <div class="footer-legal-links">
+          <a href="#" class="footer-legal-link">Privacy Policy</a>
+          <a href="#" class="footer-legal-link">Terms of Service</a>
+          <a href="#" class="footer-legal-link">Security Audits</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Link -->
+  <script src="script.js"></script>
+</body>
+</html>

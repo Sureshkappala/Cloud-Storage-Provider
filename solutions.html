@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stackly Solutions - Decentralized secure file storage, automated continuous backup pipelines, zero-knowledge encryption protocols.">
+  <title>Solutions | Stackly Premium Cloud Storage</title>
+  
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+  <!-- --- 1. STICKY NAVIGATION BAR WITH MOBILE DRAWER --- -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img">
+      </a>
+      
+      <!-- Drawer Menu (acts as navbar on desktop and mobile drawer) -->
+      <nav class="navbar">
+        <div class="drawer-header">
+          <a href="index.html" class="logo">
+            <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img">
+          </a>
+          <button class="drawer-close" aria-label="Close Menu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        
+        <div class="drawer-search">
+          <div style="position: relative; width: 100%;">
+            <input type="text" placeholder="Search resources..." onkeyup="if(event.key === 'Enter') { window.location.href='resources.html#blog'; }">
+            <i class="fa-solid fa-magnifying-glass" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-secondary); pointer-events: none;"></i>
+          </div>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-home">Home</a></li>
+          <li><a href="about.html" class="nav-about">About</a></li>
+          <li><a href="solutions.html" class="nav-solutions active">Solutions</a></li>
+          <li><a href="features.html" class="nav-features">Features</a></li>
+          <li><a href="pricing.html" class="nav-pricing">Pricing</a></li>
+          <li><a href="resources.html" class="nav-resources">Resources</a></li>
+          <li><a href="contact.html" class="nav-contact">Contact</a></li>
+        </ul>
+        
+        <div class="nav-mobile-cta">
+          <a href="login.html" class="btn btn-secondary">Login</a>
+          <a href="contact.html" class="btn btn-primary">Start Free Trial</a>
+        </div>
+        
+        <div class="drawer-contact-info">
+          <h5>Contact Info</h5>
+          <p><i class="fa-solid fa-phone"></i> +1 (800) 555-STACK</p>
+          <p><i class="fa-solid fa-envelope"></i> support@stackly.storage</p>
+          <p><i class="fa-solid fa-location-dot"></i> 100 Wall Street, 28th Floor, New York, NY 10005</p>
+        </div>
+      </nav>
+      
+      <div class="nav-controls">
+        <a href="login.html" class="btn btn-secondary btn-sm"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+        <a href="contact.html" class="btn btn-primary btn-sm">Start Free Trial</a>
+        <button class="menu-toggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- --- 2. TITLE BANNER --- -->
+  <section class="section" style="padding-top: 10rem; padding-bottom: 3rem; background: #0c101b; border-bottom: 1px solid #1e293b;">
+    <div class="container" style="text-align: center;">
+      <span class="section-tag">Enterprise Architecture</span>
+      <h1 class="subpage-title">Storage Solutions</h1>
+      <p style="max-width: 600px; margin: 0 auto; color: var(--text-secondary);">
+        Explore how Stackly's zero-knowledge technology secures your databases, backups, and shared assets.
+      </p>
+    </div>
+  </section>
+
+  <!-- --- 3. SECURE FILE STORAGE SOLUTIONS --- -->
+  <section id="sync" class="section">
+    <div class="container">
+      <div class="sync-grid">
+        <div class="sync-info reveal-left active" style="display: flex; flex-direction: column; justify-content: center; min-height: 100%;">
+          <div>
+            <span class="section-tag">Instant Sync</span>
+            <h2 class="section-title">Zero-Lag File Synchronization</h2>
+            <p class="section-desc" style="margin-bottom: 2rem;">
+              No manual upload runs. Stackly syncs file delta changes instantly behind the scenes using block-level synchronization. Only modifications are uploaded, saving data packets and processing speed.
+            </p>
+            <a href="features.html" class="btn btn-primary"><i class="fa-solid fa-rotate"></i> Try Sync Engine</a>
+          </div>
+        </div>
+        
+        <div class="interactive-mockup reveal-right active">
+          <!-- Devices Access Mockup -->
+          <div class="device-mockup-wrapper">
+            <div class="sync-wave"></div>
+            <div class="device-node device-cloud-center">
+              <i class="fa-solid fa-cloud"></i>
+            </div>
+            <div class="device-node device-desktop">
+              <i class="fa-solid fa-laptop"></i>
+              <span>Office iMac</span>
+            </div>
+            <div class="device-node device-mobile">
+              <i class="fa-solid fa-mobile-button"></i>
+              <span>iPhone 15</span>
+            </div>
+            <div class="device-node device-tablet">
+              <i class="fa-solid fa-tablet-screen-button"></i>
+              <span>iPad Pro</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- 4. CLOUD BACKUP SECTION --- -->
+  <section id="backup" class="section" style="border-top: 1px solid #1e293b;">
+    <div class="container">
+      <div class="backup-grid reverse-layout">
+        <div class="interactive-mockup reveal-left active">
+          <!-- Backup timeline step illustration -->
+          <div class="backup-timeline">
+            <div class="timeline-step completed">
+              <div class="step-indicator">1</div>
+              <div class="step-details">
+                <h4>Detect Changes</h4>
+                <p>System detects modifications on documents and code blocks automatically.</p>
+              </div>
+            </div>
+            <div class="timeline-step completed">
+              <div class="step-indicator">2</div>
+              <div class="step-details">
+                <h4>Asymmetric Encryption</h4>
+                <p>Fragments encrypt using military AES-256 standard on device local disk.</p>
+              </div>
+            </div>
+            <div class="timeline-step completed">
+              <div class="step-indicator">3</div>
+              <div class="step-details">
+                <h4>Decentralized Split</h4>
+                <p>Encrypted block breaks into 12 secure fragments and distributes to global network.</p>
+              </div>
+            </div>
+            <div class="timeline-step">
+              <div class="step-indicator">4</div>
+              <div class="step-details">
+                <h4>Validate Integrity</h4>
+                <p>Consensus protocols verify storage integrity nodes dynamically.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="backup-info reveal-right active" style="display: flex; flex-direction: column; justify-content: center; min-height: 100%;">
+          <div>
+            <span class="section-tag">Secure Backup</span>
+            <h2 class="section-title">Automated Continuous Backups</h2>
+            <p class="section-desc" style="margin-bottom: 2rem;">
+              Never fear computer crashes or local hard drive failures. Stackly backups happen continuously, uploading modifications silently with military security.
+            </p>
+            <a href="contact.html" class="btn btn-purple"><i class="fa-solid fa-cloud-arrow-up"></i> Configure Backups</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- 5. ZERO-KNOWLEDGE SECURITY & CRYPTO --- -->
+  <section id="crypto" class="section" style="border-top: 1px solid #1e293b;">
+    <div class="container">
+      <div class="crypto-grid">
+        <div class="crypto-info reveal-left active" style="display: flex; flex-direction: column; justify-content: center; min-height: 100%;">
+          <div>
+            <span class="section-tag">Encryption</span>
+            <h2 class="section-title">Zero-Knowledge Data Encryption</h2>
+            <p class="section-desc" style="margin-bottom: 2rem;">
+              Zero-knowledge means we do not have possession of your account password or file decryption keys. Your private keys never leave your browser or native disk. Even our database admins cannot view your content.
+            </p>
+            <a href="contact.html" class="btn btn-primary"><i class="fa-solid fa-key"></i> Verify Protocols</a>
+          </div>
+        </div>
+        
+        <div class="interactive-mockup reveal-right active">
+          <div class="crypto-visual">
+            <div class="shield-container">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div class="crypto-line">
+              AES-256 [00f2fe9d4edd] SECURE CHIP KEY: 9e32ffde9100fa110ac
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- --- FOOTER --- -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom: 1.25rem;">
+            <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img">
+          </a>
+          <p class="footer-desc">
+            Premium next-generation decentralized cloud storage provider. Zero-knowledge encryption, real-time sync, and ultimate security.
+          </p>
+          <div class="social-links">
+            <a href="404.html" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="404.html" class="social-link" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="404.html" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="solutions.html" class="footer-link">Our Solutions</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing Plans</a></li>
+            <li><a href="about.html" class="footer-link">About Stackly</a></li>
+            <li><a href="features.html" class="footer-link">Features Log</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html" class="footer-link">Contact Coordinates</a></li>
+            <li><a href="pricing.html#faq" class="footer-link">Terms & Agreements</a></li>
+            <li><a href="about.html" class="footer-link">Security Audits</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p style="margin-bottom: 1.25rem;">
+            Get quarterly cloud storage updates and exclusive early-bird product announcements.
+          </p>
+          <div class="footer-newsletter-wrap">
+            <input type="email" placeholder="Your Email">
+            <button type="button">Join</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Stackly Storage Corp. All rights reserved. Designed for secure cloud storage.</p>
+        <div class="footer-legal-links">
+          <a href="#" class="footer-legal-link">Privacy Policy</a>
+          <a href="#" class="footer-legal-link">Terms of Service</a>
+          <a href="#" class="footer-legal-link">Security Audits</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Link -->
+  <script src="script.js"></script>
+</body>
+</html>

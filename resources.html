@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stackly Resources - Technical blog posts, customer reviews, testimonials, and server infrastructure updates.">
+  <title>Resources | Stackly Premium Cloud Storage</title>
+  
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+  <!-- --- 1. STICKY NAVIGATION BAR WITH MOBILE DRAWER --- -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img">
+      </a>
+      
+      <!-- Drawer Menu (acts as navbar on desktop and mobile drawer) -->
+      <nav class="navbar">
+        <div class="drawer-header">
+          <a href="index.html" class="logo">
+            <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img">
+          </a>
+          <button class="drawer-close" aria-label="Close Menu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        
+        <div class="drawer-search">
+          <div style="position: relative; width: 100%;">
+            <input type="text" placeholder="Search resources..." onkeyup="if(event.key === 'Enter') { window.location.href='#blog'; }">
+            <i class="fa-solid fa-magnifying-glass" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-secondary); pointer-events: none;"></i>
+          </div>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-home">Home</a></li>
+          <li><a href="about.html" class="nav-about">About</a></li>
+          <li><a href="solutions.html" class="nav-solutions">Solutions</a></li>
+          <li><a href="features.html" class="nav-features">Features</a></li>
+          <li><a href="pricing.html" class="nav-pricing">Pricing</a></li>
+          <li><a href="resources.html" class="nav-resources active">Resources</a></li>
+          <li><a href="contact.html" class="nav-contact">Contact</a></li>
+        </ul>
+        
+        <div class="nav-mobile-cta">
+          <a href="login.html" class="btn btn-secondary">Login</a>
+          <a href="contact.html" class="btn btn-primary">Start Free Trial</a>
+        </div>
+        
+        <div class="drawer-contact-info">
+          <h5>Contact Info</h5>
+          <p><i class="fa-solid fa-phone"></i> +1 (800) 555-STACK</p>
+          <p><i class="fa-solid fa-envelope"></i> support@stackly.storage</p>
+          <p><i class="fa-solid fa-location-dot"></i> 100 Wall Street, 28th Floor, New York, NY 10005</p>
+        </div>
+      </nav>
+      
+      <div class="nav-controls">
+        <a href="login.html" class="btn btn-secondary btn-sm"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+        <a href="contact.html" class="btn btn-primary btn-sm">Start Free Trial</a>
+        <button class="menu-toggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- --- 2. TITLE BANNER --- -->
+  <section class="section" style="padding-top: 10rem; padding-bottom: 3rem; background: #0c101b; border-bottom: 1px solid #1e293b;">
+    <div class="container" style="text-align: center;">
+      <span class="section-tag">Resource Hub</span>
+      <h1 class="subpage-title">Guides & Testimonials</h1>
+      <p style="max-width: 600px; margin: 0 auto; color: var(--text-secondary);">
+        Browse through client case studies, tech documentation parameters, and infrastructure updates.
+      </p>
+    </div>
+  </section>
+
+  <!-- --- 3. CUSTOMER REVIEWS / TESTIMONIALS SLIDER --- -->
+  <section id="testimonials-section" class="section">
+    <div class="container">
+      <div class="section-header reveal active">
+        <span class="section-tag">Client Feedback</span>
+        <h2 class="section-title">Trusted by Modern Innovators</h2>
+        <p class="section-desc">Hear what engineers, creators, and corporate leaders say about Stackly.</p>
+      </div>
+
+      <div class="testimonials-slider-container reveal active">
+        <div class="testimonials-track">
+          
+          <!-- Slide 1 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <p class="testimonial-text">
+                &ldquo;Stackly completely transformed our pipeline. The cross-platform synchronization is instant, and the data deduplication saved us terabytes of redundant network transfers.&rdquo;
+              </p>
+              <div class="testimonial-user">
+                <img src="assets/avatar_sarah.webp" alt="Sarah Jenkins" class="user-img">
+                <div class="user-details">
+                  <h4>Sarah Jenkins</h4>
+                  <span>Lead Architect, TechCore Inc.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <p class="testimonial-text">
+                &ldquo;As a cybersecurity firm, zero-knowledge security is non-negotiable. Stackly is the only cloud backup provider we trust with our sensitive repository architectures.&rdquo;
+              </p>
+              <div class="testimonial-user">
+                <img src="assets/avatar_david.webp" alt="David Vance" class="user-img">
+                <div class="user-details">
+                  <h4>David Vance</h4>
+                  <span>Founder, Apex Cyber Security</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <p class="testimonial-text">
+                &ldquo;The team collaboration tools allowed our remote editors to sync large 4K files effortlessly. Highly recommended for creative groups needing high security.&rdquo;
+              </p>
+              <div class="testimonial-user">
+                <img src="assets/avatar_elena.webp" alt="Elena Rostova" class="user-img">
+                <div class="user-details">
+                  <h4>Elena Rostova</h4>
+                  <span>Creative Director, NovaMedia</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="slider-controls">
+          <!-- Dots will be generated dynamically by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- 4. BLOG & NEWS GRID --- -->
+  <section id="blog" class="section" style="border-top: 1px solid #1e293b;">
+    <div class="container">
+      <div class="section-header reveal active">
+        <span class="section-tag">Resource Center</span>
+        <h2 class="section-title">From the Stackly Blog</h2>
+        <p class="section-desc">Learn about decentralized architecture, web security trends, and system features.</p>
+      </div>
+
+      <div class="blog-grid">
+        <!-- Blog 1 -->
+        <div class="glass-card blog-card reveal active">
+          <div class="blog-image-wrapper">
+            <img src="assets/blog_decentralized.webp" alt="Decentralized cloud network layout" class="blog-img" loading="lazy">
+            <span class="blog-category">Tech</span>
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span>Aug 4, 2026</span>
+              <span>&bull;</span>
+              <span>5 min read</span>
+            </div>
+            <h3 class="blog-title"><a href="#blog">The Future of Decentralized Cloud Infrastructure</a></h3>
+            <p class="blog-excerpt">Discover how distributing segmented block bytes across regional server systems enhances security and speeds up file sync latency.</p>
+            <a href="#blog" class="blog-readmore">
+              <span>Read Full Article</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Blog 2 -->
+        <div class="glass-card blog-card reveal active" style="animation-delay: 0.1s;">
+          <div class="blog-image-wrapper">
+            <img src="assets/blog_security.webp" alt="Encryption shield illustration" class="blog-img" loading="lazy">
+            <span class="blog-category">Security</span>
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span>Jul 28, 2026</span>
+              <span>&bull;</span>
+              <span>8 min read</span>
+            </div>
+            <h3 class="blog-title"><a href="#blog">Zero-Knowledge Encryption Principles</a></h3>
+            <p class="blog-excerpt">An in-depth technical analysis explaining why clients must handle decryption keys locally on physical disks for premium security.</p>
+            <a href="#blog" class="blog-readmore">
+              <span>Read Full Article</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Blog 3 -->
+        <div class="glass-card blog-card reveal active" style="animation-delay: 0.2s;">
+          <div class="blog-image-wrapper">
+            <img src="assets/blog_datacenter.webp" alt="Corridor of data center server cabinets" class="blog-img" loading="lazy">
+            <span class="blog-category">Engineering</span>
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span>Jul 15, 2026</span>
+              <span>&bull;</span>
+              <span>6 min read</span>
+            </div>
+            <h3 class="blog-title"><a href="#blog">Achieving 99.999% SLA High Availability</a></h3>
+            <p class="blog-excerpt">How modern edge server architectures route data connections dynamically around physical data grid failure incidents.</p>
+            <a href="#blog" class="blog-readmore">
+              <span>Read Full Article</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- --- FOOTER --- -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom: 1.25rem;">
+            <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img">
+          </a>
+          <p class="footer-desc">
+            Premium next-generation decentralized cloud storage provider. Zero-knowledge encryption, real-time sync, and ultimate security.
+          </p>
+          <div class="social-links">
+            <a href="404.html" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="404.html" class="social-link" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="404.html" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="solutions.html" class="footer-link">Our Solutions</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing Plans</a></li>
+            <li><a href="about.html" class="footer-link">About Stackly</a></li>
+            <li><a href="features.html" class="footer-link">Features Log</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html" class="footer-link">Contact Coordinates</a></li>
+            <li><a href="pricing.html#faq" class="footer-link">Terms & Agreements</a></li>
+            <li><a href="about.html" class="footer-link">Security Audits</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p style="margin-bottom: 1.25rem;">
+            Get quarterly cloud storage updates and exclusive early-bird product announcements.
+          </p>
+          <div class="footer-newsletter-wrap">
+            <input type="email" placeholder="Your Email">
+            <button type="button">Join</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Stackly Storage Corp. All rights reserved. Designed for secure cloud storage.</p>
+        <div class="footer-legal-links">
+          <a href="#" class="footer-legal-link">Privacy Policy</a>
+          <a href="#" class="footer-legal-link">Terms of Service</a>
+          <a href="#" class="footer-legal-link">Security Audits</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Link -->
+  <script src="script.js"></script>
+</body>
+</html>

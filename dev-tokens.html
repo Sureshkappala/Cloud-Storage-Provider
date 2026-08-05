@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stackly Developer Console - API Access Keys & Authentication Tokens management.">
+  <title>API Access Tokens | Developer Console</title>
+  
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- --- DASHBOARD FULL WORKSPACE --- -->
+  <div class="dashboard-layout">
+    
+    <!-- --- LEFT SIDEBAR DRAWER (DEVELOPER MODE) --- -->
+    <aside class="dashboard-sidebar">
+      <div style="width: 100%;">
+        <a href="index.html" class="dashboard-sidebar-logo" style="border-bottom: none; padding: 0;">
+          <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img">
+        </a>
+        <ul class="dashboard-sidebar-menu">
+          <li>
+            <a href="dev-dashboard.html">
+              <i class="fa-solid fa-code"></i> API &amp; Webhooks
+            </a>
+          </li>
+          <li>
+            <a href="dev-buckets.html">
+              <i class="fa-solid fa-cubes"></i> Bucket Clusters
+            </a>
+          </li>
+          <li>
+            <a href="dev-tokens.html" class="active">
+              <i class="fa-solid fa-key"></i> API Access Tokens
+            </a>
+          </li>
+          <li>
+            <a href="index.html">
+              <i class="fa-solid fa-globe"></i> Main Portal
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="dashboard-sidebar-footer">
+        <a href="login.html">
+          <i class="fa-solid fa-power-off"></i> Logout
+        </a>
+      </div>
+    </aside>
+
+    <!-- --- MAIN CONTENT CONSOLE --- -->
+    <div class="dashboard-main">
+      
+      <!-- --- STICKY CONSOLE HEADER --- -->
+      <header class="dashboard-header">
+        <div class="dashboard-header-left">
+          <button class="dashboard-toggle" aria-label="Open Sidebar Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="dashboard-breadcrumb">
+            Developer Console / <span>API Access Tokens</span>
+          </div>
+        </div>
+        
+        <div class="dashboard-header-right">
+          <div class="dashboard-user-profile">
+            <img src="assets/avatar_elena.webp" alt="Elena Rostova">
+            <span>Elena Rostova (Dev)</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- --- SCROLLABLE WORKSPACE CONTENT --- -->
+      <main class="dashboard-content">
+        
+        <div class="dashboard-grid">
+          
+          <!-- Left: Key Generator form -->
+          <div class="dashboard-card">
+            <div class="dashboard-card-header">
+              <h3>Generate API Access Key</h3>
+            </div>
+            
+            <form id="token-generator-form" onsubmit="event.preventDefault();">
+              <div class="form-group" style="margin-bottom: 1.25rem;">
+                <label for="token-name" style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600;">Access Key Name / Label</label>
+                <div class="form-input-wrap" style="position: relative;">
+                  <i class="fa-solid fa-tag" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--accent-cyan);"></i>
+                  <input type="text" id="token-name" class="form-control" placeholder="e.g. Production Backup Server" style="padding-left: 2.75rem;" required>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 1.25rem;">
+                <label for="token-scope" style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600;">Access Scope Permissions</label>
+                <div class="form-input-wrap">
+                  <i class="fa-solid fa-user-shield"></i>
+                  <select id="token-scope" class="form-control" style="background: rgba(4, 8, 20, 0.8); border: 1px solid #1e293b; color: #fff; width: 100%; border-radius: 4px; padding-left: 2.75rem; height: 42px; outline: none;" required>
+                    <option value="read:storage" selected>Read Only (read:storage)</option>
+                    <option value="write:storage">Write Only (write:storage)</option>
+                    <option value="full_access">Full Admin Control (full_access)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div style="margin-top: 1.5rem;">
+                <button type="submit" class="btn btn-primary" id="btn-generate-key" style="width: 100%;"><i class="fa-solid fa-key"></i> Generate Authentication Key</button>
+              </div>
+            </form>
+            
+            <!-- Created token warning output -->
+            <div id="new-token-alert" style="display: none; background: rgba(0, 229, 255, 0.08); border: 1px solid rgba(0, 229, 255, 0.2); padding: 1.25rem; border-radius: var(--radius-xs); margin-top: 1.5rem;">
+              <span style="font-size: 0.8rem; font-weight: 700; color: #fff; display: block; margin-bottom: 0.5rem;"><i class="fa-solid fa-triangle-exclamation" style="color: var(--accent-cyan); margin-right: 6px;"></i> Copy token key now (Warning: visible only once!)</span>
+              <div style="display: flex; gap: 8px;">
+                <input type="text" id="new-token-key-val" class="form-control" style="font-family: monospace; font-size: 0.8rem;" readonly>
+                <button class="btn btn-secondary btn-sm" onclick="
+                  const el = document.getElementById('new-token-key-val');
+                  el.select();
+                  document.execCommand('copy');
+                  alert('Token copied to clipboard.');
+                "><i class="fa-solid fa-copy"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Key List table -->
+          <div class="dashboard-card" style="display: flex; flex-direction: column; justify-content: flex-start;">
+            <div class="dashboard-card-header">
+              <h3>Active Access Credentials</h3>
+            </div>
+            
+            <div class="dashboard-table-wrapper">
+              <table class="dashboard-table" id="tokens-list-table">
+                <thead>
+                  <tr>
+                    <th>Key Name</th>
+                    <th>Permissions Scope</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div>
+                        <strong style="color: #fff; font-size: 0.85rem; display: block;">Default Vault Sync</strong>
+                        <code style="font-size: 0.75rem; color: var(--text-secondary);">sk_live_...4f98</code>
+                      </div>
+                    </td>
+                    <td><code style="color: var(--accent-cyan); font-size: 0.8rem;">full_access</code></td>
+                    <td><span class="status-badge">Active</span></td>
+                    <td>
+                      <button class="btn btn-secondary btn-sm" style="padding: 0.35rem 0.6rem; font-size: 0.7rem; color: #ef4444;" onclick="this.closest('tr').remove(); alert('API credentials revoked.');"><i class="fa-solid fa-ban"></i> Revoke</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+      </main>
+    </div>
+
+  </div>
+
+  <!-- JavaScript Link -->
+  <script src="script.js"></script>
+  
+  <!-- Interactive Token Creation Logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const btnGen = document.getElementById('btn-generate-key');
+      const inputName = document.getElementById('token-name');
+      const selectScope = document.getElementById('token-scope');
+      const tableBody = document.querySelector('#tokens-list-table tbody');
+      
+      const alertBox = document.getElementById('new-token-alert');
+      const alertInput = document.getElementById('new-token-key-val');
+      
+      if (btnGen && tableBody) {
+        btnGen.addEventListener('click', (e) => {
+          e.preventDefault();
+          const name = inputName.value.trim();
+          if (name === '') {
+            alert('Please enter a name for the key.');
+            return;
+          }
+          
+          const scope = selectScope.value;
+          
+          // Generate simulated sk key
+          const randHex = Array.from({length: 24}, () => Math.floor(Math.random()*16).toString(16)).join('');
+          const tokenStr = 'sk_live_' + randHex;
+          
+          // Add to table
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td>
+              <div>
+                <strong style="color: #fff; font-size: 0.85rem; display: block;">${name}</strong>
+                <code style="font-size: 0.75rem; color: var(--text-secondary);">${tokenStr.substring(0, 12)}...${tokenStr.substring(28)}</code>
+              </div>
+            </td>
+            <td><code style="color: var(--accent-cyan); font-size: 0.8rem;">${scope}</code></td>
+            <td><span class="status-badge">Active</span></td>
+            <td>
+              <button class="btn btn-secondary btn-sm" style="padding: 0.35rem 0.6rem; font-size: 0.7rem; color: #ef4444;" onclick="this.closest('tr').remove(); alert('API credentials revoked.');"><i class="fa-solid fa-ban"></i> Revoke</button>
+            </td>
+          `;
+          tableBody.appendChild(tr);
+          
+          // Show alert with full token key
+          alertInput.value = tokenStr;
+          alertBox.style.display = 'block';
+          
+          // Reset name input
+          inputName.value = '';
+        });
+      }
+    });
+  </script>
+</body>
+</html>

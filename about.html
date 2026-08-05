@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Stackly - Decentralized storage infrastructures, customer testimonials, security compliance audits, and SLA uptime parameters.">
+  <title>About Us | Stackly Premium Cloud Storage</title>
+  
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+  <!-- --- 1. STICKY NAVIGATION BAR WITH MOBILE DRAWER --- -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img">
+      </a>
+      
+      <!-- Drawer Menu (acts as navbar on desktop and mobile drawer) -->
+      <nav class="navbar">
+        <div class="drawer-header">
+          <a href="index.html" class="logo">
+            <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img">
+          </a>
+          <button class="drawer-close" aria-label="Close Menu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        
+        <div class="drawer-search">
+          <div style="position: relative; width: 100%;">
+            <input type="text" placeholder="Search resources..." onkeyup="if(event.key === 'Enter') { window.location.href='resources.html#blog'; }">
+            <i class="fa-solid fa-magnifying-glass" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-secondary); pointer-events: none;"></i>
+          </div>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-home">Home</a></li>
+          <li><a href="about.html" class="nav-about active">About</a></li>
+          <li><a href="solutions.html" class="nav-solutions">Solutions</a></li>
+          <li><a href="features.html" class="nav-features">Features</a></li>
+          <li><a href="pricing.html" class="nav-pricing">Pricing</a></li>
+          <li><a href="resources.html" class="nav-resources">Resources</a></li>
+          <li><a href="contact.html" class="nav-contact">Contact</a></li>
+        </ul>
+        
+        <div class="nav-mobile-cta">
+          <a href="login.html" class="btn btn-secondary">Login</a>
+          <a href="contact.html" class="btn btn-primary">Start Free Trial</a>
+        </div>
+        
+        <div class="drawer-contact-info">
+          <h5>Contact Info</h5>
+          <p><i class="fa-solid fa-phone"></i> +1 (800) 555-STACK</p>
+          <p><i class="fa-solid fa-envelope"></i> support@stackly.storage</p>
+          <p><i class="fa-solid fa-location-dot"></i> 100 Wall Street, 28th Floor, New York, NY 10005</p>
+        </div>
+      </nav>
+      
+      <div class="nav-controls">
+        <a href="login.html" class="btn btn-secondary btn-sm"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+        <a href="contact.html" class="btn btn-primary btn-sm">Start Free Trial</a>
+        <button class="menu-toggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- --- 2. ABOUT TITLE BANNER --- -->
+  <section class="section" style="padding-top: 10rem; padding-bottom: 3rem; background: #0c101b; border-bottom: 1px solid #1e293b;">
+    <div class="container" style="text-align: center;">
+      <span class="section-tag">Corporate Background</span>
+      <h1 class="subpage-title">Who We Are</h1>
+      <p style="max-width: 600px; margin: 0 auto; color: var(--text-secondary);">
+        Stackly was founded in 2026 with a singular focus: replacing insecure centralized file systems with highly available, zero-knowledge decentralized architectures.
+      </p>
+    </div>
+  </section>
+
+  <!-- --- 3. DETAILED ABOUT SECTION --- -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content reveal-left active">
+          <span class="section-tag">Decentralized Power</span>
+          <h2 class="section-title">Re-architecting Storage For Absolute Security</h2>
+          <p class="section-desc" style="margin-bottom: 2rem;">
+            Traditional cloud servers are centralized, creating primary targets for breaches. Stackly distributes fragments of your encrypted files globally across nodes, ensuring zero downtime and structural integrity.
+          </p>
+          <a href="features.html" class="btn btn-purple"><i class="fa-solid fa-shield-halved"></i> Explore Features Details</a>
+        </div>
+        
+        <div class="about-features reveal-right active">
+          <div class="about-feature-item">
+            <div class="about-feature-icon">
+              <i class="fa-solid fa-server"></i>
+            </div>
+            <div>
+              <h3>High Availability SLA</h3>
+              <p>Redundant cross-region cloud nodes deliver reliable data delivery without failure bottlenecks.</p>
+            </div>
+          </div>
+          
+          <div class="about-feature-item">
+            <div class="about-feature-icon" style="color: var(--accent-purple); background: rgba(157, 78, 221, 0.1);">
+              <i class="fa-solid fa-compress"></i>
+            </div>
+            <div>
+              <h3>Smart Deduplication</h3>
+              <p>Eliminate waste data blocks and compress transfer bundles prior to synchronization.</p>
+            </div>
+          </div>
+
+          <div class="about-feature-item">
+            <div class="about-feature-icon" style="color: var(--accent-blue); background: rgba(79, 172, 254, 0.1);">
+              <i class="fa-solid fa-earth-americas"></i>
+            </div>
+            <div>
+              <h3>Multi-Region Hosting</h3>
+              <p>Distribute data packages globally over highly isolated regions for seamless physical reliability.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- 4. NEW SECTION 1: CORPORATE CORE VALUES --- -->
+  <section class="section" style="border-top: 1px solid #1e293b; background: #0c101b;">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Core Pillars</span>
+        <h2 class="section-title">Driven by Principles, Powered by Code</h2>
+        <p class="section-desc">Our decentralized storage cloud is designed according to three fundamental operational principles.</p>
+      </div>
+      <div class="stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+        <div class="glass-card reveal" style="padding: 2.5rem 2rem; border-color: #1e293b; background: #07090e; display: flex; flex-direction: column; height: 100%;">
+          <div class="about-feature-icon" style="color: var(--accent-cyan); background: rgba(0, 229, 255, 0.08); margin-bottom: 1.5rem; width: 50px; height: 50px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; border: 1px solid rgba(0, 229, 255, 0.15); flex-shrink: 0;">
+            <i class="fa-solid fa-user-shield"></i>
+          </div>
+          <h3 style="color: #fff; font-size: 1.25rem; margin-bottom: 0.75rem; font-weight: 700;">Absolute Privacy</h3>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+            We believe you should own your records. Zero-knowledge authentication protocols verify your identity without sending passwords or key logs to our node servers.
+          </p>
+        </div>
+        
+        <div class="glass-card reveal" style="padding: 2.5rem 2rem; border-color: #1e293b; background: #07090e; display: flex; flex-direction: column; height: 100%; animation-delay: 0.1s;">
+          <div class="about-feature-icon" style="color: var(--accent-purple); background: rgba(168, 85, 247, 0.08); margin-bottom: 1.5rem; width: 50px; height: 50px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; border: 1px solid rgba(168, 85, 247, 0.15); flex-shrink: 0;">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+          </div>
+          <h3 style="color: #fff; font-size: 1.25rem; margin-bottom: 0.75rem; font-weight: 700;">Fail-Safe Redundancy</h3>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+            Centralized servers are vulnerable bottlenecks. By distributing shards over isolated zones with parity codes, we deliver continuous 100% database access.
+          </p>
+        </div>
+
+        <div class="glass-card reveal" style="padding: 2.5rem 2rem; border-color: #1e293b; background: #07090e; display: flex; flex-direction: column; height: 100%; animation-delay: 0.2s;">
+          <div class="about-feature-icon" style="color: var(--accent-cyan); background: rgba(0, 229, 255, 0.08); margin-bottom: 1.5rem; width: 50px; height: 50px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; border: 1px solid rgba(0, 229, 255, 0.15); flex-shrink: 0;">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <h3 style="color: #fff; font-size: 1.25rem; margin-bottom: 0.75rem; font-weight: 700;">Open Architecture</h3>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+            Security through obscurity is a flaw. Our cryptographic sync modules are audited by external groups, proving database compliance and privacy parameters.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- 5. NEW SECTION 2: EXECUTIVE LEADERSHIP --- -->
+  <section class="section" style="border-top: 1px solid #1e293b;">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Leadership</span>
+        <h2 class="section-title">The Minds Behind the Network</h2>
+        <p class="section-desc">Our team brings decades of combined expertise in cryptography, distributed file systems, and enterprise cybersecurity.</p>
+      </div>
+      <div class="stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+        <!-- Member 1 -->
+        <div class="glass-card reveal" style="padding: 2.2rem; border-color: #1e293b; background: #0c101b; text-align: center; display: flex; flex-direction: column; align-items: center; height: 100%;">
+          <div style="width: 110px; height: 110px; border-radius: 50%; overflow: hidden; margin-bottom: 1.5rem; border: 2px solid var(--accent-cyan); box-shadow: 0 0 15px rgba(0, 229, 255, 0.2); flex-shrink: 0;">
+            <img src="assets/avatar_david.webp" alt="Dr. Marcus Sterling" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <h3 style="color: #fff; font-size: 1.25rem; margin-bottom: 0.25rem; font-weight: 700;">Dr. Marcus Sterling</h3>
+          <span style="font-size: 0.85rem; color: var(--accent-cyan); font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; letter-spacing: 0.5px;">Chief Cryptographer &amp; Founder</span>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
+            Former lead defense mathematician specializing in zero-knowledge proofs, multiparty consensus, and asymmetric key design.
+          </p>
+        </div>
+        
+        <!-- Member 2 -->
+        <div class="glass-card reveal" style="padding: 2.2rem; border-color: #1e293b; background: #0c101b; text-align: center; display: flex; flex-direction: column; align-items: center; height: 100%; animation-delay: 0.1s;">
+          <div style="width: 110px; height: 110px; border-radius: 50%; overflow: hidden; margin-bottom: 1.5rem; border: 2px solid var(--accent-purple); box-shadow: 0 0 15px rgba(168, 85, 247, 0.2); flex-shrink: 0;">
+            <img src="assets/avatar_sarah.webp" alt="Elena Vostok" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <h3 style="color: #fff; font-size: 1.25rem; margin-bottom: 0.25rem; font-weight: 700;">Elena Vostok</h3>
+          <span style="font-size: 0.85rem; color: var(--accent-purple); font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; letter-spacing: 0.5px;">VP of Distributed Systems</span>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
+            Pioneered block-level consensus sync algorithms. Holds 14 patents in distributed hashing systems and multi-region routing.
+          </p>
+        </div>
+
+        <!-- Member 3 -->
+        <div class="glass-card reveal" style="padding: 2.2rem; border-color: #1e293b; background: #0c101b; text-align: center; display: flex; flex-direction: column; align-items: center; height: 100%; animation-delay: 0.2s;">
+          <div style="width: 110px; height: 110px; border-radius: 50%; overflow: hidden; margin-bottom: 1.5rem; border: 2px solid var(--accent-cyan); box-shadow: 0 0 15px rgba(0, 229, 255, 0.2); flex-shrink: 0;">
+            <img src="assets/avatar_elena.webp" alt="Julian Vance" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <h3 style="color: #fff; font-size: 1.25rem; margin-bottom: 0.25rem; font-weight: 700;">Julian Vance</h3>
+          <span style="font-size: 0.85rem; color: var(--accent-cyan); font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; letter-spacing: 0.5px;">CISO</span>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
+            Ex-cyber intelligence consultant. Architect of Stackly's isolation layers and hardware security key integrations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- 6. NEW SECTION 3: COMPLIANCE & SECURITY CERTIFICATIONS --- -->
+  <section class="section" style="border-top: 1px solid #1e293b; background: #0c101b;">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Compliance &amp; Audits</span>
+        <h2 class="section-title">Audited to Protect Enterprise Records</h2>
+        <p class="section-desc">Stackly is structurally compliant with security parameters and external verification systems.</p>
+      </div>
+      <div class="about-grid" style="align-items: stretch; gap: 4rem;">
+        <div class="reveal-left" style="display: flex; flex-direction: column; justify-content: center;">
+          <div>
+            <h3 style="color: #fff; font-size: 1.8rem; margin-bottom: 1rem; font-weight: 700;">Zero-compromise Standards</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+              We undergo continuous external audits to guarantee the privacy of your files. Our storage infrastructure is FIPS 140-2 certified, meaning that your data blocks are secured using military-grade cryptographic protocols.
+            </p>
+            <ul style="list-style: none; padding: 0; color: var(--text-secondary); font-size: 0.95rem;">
+              <li style="margin-bottom: 0.75rem;"><i class="fa-solid fa-shield-halved" style="color: var(--accent-cyan); margin-right: 8px;"></i> ISO/IEC 27001 compliance standards</li>
+              <li style="margin-bottom: 0.75rem;"><i class="fa-solid fa-shield-halved" style="color: var(--accent-cyan); margin-right: 8px;"></i> SOC 2 Type II operational security certificates</li>
+              <li><i class="fa-solid fa-shield-halved" style="color: var(--accent-cyan); margin-right: 8px;"></i> HIPAA &amp; GDPR privacy requirements</li>
+            </ul>
+          </div>
+        </div>
+        <div class="reveal-right" style="display: flex; justify-content: center; align-items: stretch; height: 100%;">
+          <div class="interactive-mockup crypto-visual" style="max-width: 420px; width: 100%;">
+            <div class="shield-container" style="text-align: center;">
+              <i class="fa-solid fa-shield-halved" style="font-size: 4rem; color: var(--accent-cyan);"></i>
+            </div>
+            <div style="text-align: center; margin-top: 1.5rem;">
+              <span style="display: inline-block; padding: 0.5rem 1.25rem; border-radius: 4px; background: rgba(0, 229, 255, 0.08); color: var(--accent-cyan); border: 1px solid rgba(0, 229, 255, 0.2); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.5px;">SECURE VAULT CERTIFIED</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- --- FOOTER --- -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom: 1.25rem;">
+            <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img">
+          </a>
+          <p class="footer-desc">
+            Premium next-generation decentralized cloud storage provider. Zero-knowledge encryption, real-time sync, and ultimate security.
+          </p>
+          <div class="social-links">
+            <a href="404.html" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="404.html" class="social-link" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="404.html" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="solutions.html" class="footer-link">Our Solutions</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing Plans</a></li>
+            <li><a href="about.html" class="footer-link">About Stackly</a></li>
+            <li><a href="features.html" class="footer-link">Features Log</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html" class="footer-link">Contact Coordinates</a></li>
+            <li><a href="pricing.html#faq" class="footer-link">Terms & Agreements</a></li>
+            <li><a href="about.html" class="footer-link">Security Audits</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p style="margin-bottom: 1.25rem;">
+            Get quarterly cloud storage updates and exclusive early-bird product announcements.
+          </p>
+          <div class="footer-newsletter-wrap">
+            <input type="email" placeholder="Your Email">
+            <button type="button">Join</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Stackly Storage Corp. All rights reserved. Designed for secure cloud storage.</p>
+        <div class="footer-legal-links">
+          <a href="#" class="footer-legal-link">Privacy Policy</a>
+          <a href="#" class="footer-legal-link">Terms of Service</a>
+          <a href="#" class="footer-legal-link">Security Audits</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Link -->
+  <script src="script.js"></script>
+</body>
+</html>

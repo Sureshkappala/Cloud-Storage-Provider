@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stackly Decentralized Console - Storage Explorer and file repository explorer.">
+  <title>Storage Files | Stackly Premium Cloud Storage</title>
+  
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- --- DASHBOARD FULL WORKSPACE --- -->
+  <div class="dashboard-layout">
+    
+    <!-- --- LEFT SIDEBAR DRAWER --- -->
+    <aside class="dashboard-sidebar">
+      <div style="width: 100%;">
+        <a href="index.html" class="dashboard-sidebar-logo" style="border-bottom: none; padding: 0;">
+          <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img">
+        </a>
+        <ul class="dashboard-sidebar-menu">
+          <li>
+            <a href="dashboard.html">
+              <i class="fa-solid fa-gauge"></i> Overview
+            </a>
+          </li>
+          <li>
+            <a href="dashboard-files.html" class="active">
+              <i class="fa-solid fa-folder-open"></i> Storage Files
+            </a>
+          </li>
+          <li>
+            <a href="dashboard-settings.html">
+              <i class="fa-solid fa-shield-halved"></i> Credentials &amp; MFA
+            </a>
+          </li>
+          <li>
+            <a href="index.html">
+              <i class="fa-solid fa-globe"></i> Main Portal
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="dashboard-sidebar-footer">
+        <a href="login.html">
+          <i class="fa-solid fa-power-off"></i> Logout
+        </a>
+      </div>
+    </aside>
+
+    <!-- --- MAIN CONTENT CONSOLE --- -->
+    <div class="dashboard-main">
+      
+      <!-- --- STICKY CONSOLE HEADER --- -->
+      <header class="dashboard-header">
+        <div class="dashboard-header-left">
+          <button class="dashboard-toggle" aria-label="Open Sidebar Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="dashboard-breadcrumb">
+            Console / <span>Storage Files</span>
+          </div>
+        </div>
+        
+        <div class="dashboard-header-right">
+          <div class="dashboard-user-profile">
+            <img src="assets/avatar_sarah.webp" alt="Sarah Jenkins">
+            <span>Sarah Jenkins</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- --- SCROLLABLE WORKSPACE CONTENT --- -->
+      <main class="dashboard-content">
+        
+        <!-- --- FILE CONTROLS --- -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <a href="#" class="btn btn-secondary btn-sm" style="padding: 0.5rem 1rem;"><i class="fa-solid fa-arrow-up"></i> Up</a>
+            <span style="color: var(--text-secondary); font-size: 0.9rem;">Path: <strong style="color: #fff;">/ Root</strong></span>
+          </div>
+          <div style="display: flex; gap: 0.75rem;">
+            <button class="btn btn-secondary btn-sm" onclick="const name=prompt('Folder Name:'); if(name) alert('Folder \'' + name + '\' created on regional sectors.')">
+              <i class="fa-solid fa-folder-plus"></i> New Folder
+            </button>
+            <button class="btn btn-primary btn-sm" onclick="alert('Select file selector simulated: File chunked and encrypted before upload transmission.')">
+              <i class="fa-solid fa-cloud-arrow-up"></i> Upload File
+            </button>
+          </div>
+        </div>
+
+        <!-- --- DIRECTORIES GRID --- -->
+        <h3 style="color: #fff; font-size: 1.05rem; margin-bottom: 1rem; font-family: var(--font-title);">Folders</h3>
+        <div class="explorer-grid">
+          <div class="folder-card" onclick="alert('Entering Folder: Company Records')">
+            <i class="fa-solid fa-folder"></i>
+            <span>Company Records</span>
+          </div>
+          <div class="folder-card" onclick="alert('Entering Folder: Database Backups')">
+            <i class="fa-solid fa-folder"></i>
+            <span>Database Backups</span>
+          </div>
+          <div class="folder-card" onclick="alert('Entering Folder: Public Web Assets')">
+            <i class="fa-solid fa-folder"></i>
+            <span>Public Web Assets</span>
+          </div>
+          <div class="folder-card" onclick="alert('Entering Folder: Personal Crypts')">
+            <i class="fa-solid fa-folder"></i>
+            <span>Personal Crypts</span>
+          </div>
+        </div>
+
+        <!-- --- FILES LIST TABLE --- -->
+        <div class="dashboard-card">
+          <div class="dashboard-card-header">
+            <h3>Files in Root Sector</h3>
+          </div>
+          <div class="dashboard-table-wrapper">
+            <table class="dashboard-table">
+              <thead>
+                <tr>
+                  <th>Filename</th>
+                  <th>Size</th>
+                  <th>Date Modified</th>
+                  <th>Connected Nodes</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="file-name-cell">
+                      <i class="fa-solid fa-file-pdf"></i>
+                      <span>Q4_Financials_Encrypted.pdf</span>
+                    </div>
+                  </td>
+                  <td>12.4 MB</td>
+                  <td>2 hours ago</td>
+                  <td>12/12 active</td>
+                  <td>
+                    <div style="display: flex; gap: 8px;">
+                      <a href="#" class="btn btn-secondary btn-sm" style="padding: 0.3rem 0.6rem; font-size: 0.75rem;" onclick="alert('Client decrypted download successful.')"><i class="fa-solid fa-download"></i></a>
+                      <a href="#" class="btn btn-secondary btn-sm" style="padding: 0.3rem 0.6rem; font-size: 0.75rem; color: #ef4444;" onclick="alert('File marked for node consensus purge.')"><i class="fa-solid fa-trash"></i></a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="file-name-cell">
+                      <i class="fa-solid fa-file-image"></i>
+                      <span>avatar_sarah.webp</span>
+                    </div>
+                  </td>
+                  <td>4.6 KB</td>
+                  <td>1 day ago</td>
+                  <td>12/12 active</td>
+                  <td>
+                    <div style="display: flex; gap: 8px;">
+                      <a href="#" class="btn btn-secondary btn-sm" style="padding: 0.3rem 0.6rem; font-size: 0.75rem;" onclick="alert('Client decrypted download successful.')"><i class="fa-solid fa-download"></i></a>
+                      <a href="#" class="btn btn-secondary btn-sm" style="padding: 0.3rem 0.6rem; font-size: 0.75rem; color: #ef4444;" onclick="alert('File marked for node consensus purge.')"><i class="fa-solid fa-trash"></i></a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="file-name-cell">
+                      <i class="fa-solid fa-file-code"></i>
+                      <span>Dev_Stack_Configuration.yml</span>
+                    </div>
+                  </td>
+                  <td>8.2 KB</td>
+                  <td>2 days ago</td>
+                  <td>12/12 active</td>
+                  <td>
+                    <div style="display: flex; gap: 8px;">
+                      <a href="#" class="btn btn-secondary btn-sm" style="padding: 0.3rem 0.6rem; font-size: 0.75rem;" onclick="alert('Client decrypted download successful.')"><i class="fa-solid fa-download"></i></a>
+                      <a href="#" class="btn btn-secondary btn-sm" style="padding: 0.3rem 0.6rem; font-size: 0.75rem; color: #ef4444;" onclick="alert('File marked for node consensus purge.')"><i class="fa-solid fa-trash"></i></a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="file-name-cell">
+                      <i class="fa-solid fa-file-zipper"></i>
+                      <span>Database_Backup_V3.tar.gz</span>
+                    </div>
+                  </td>
+                  <td>1.4 GB</td>
+                  <td>3 days ago</td>
+                  <td>12/12 active</td>
+                  <td>
+                    <div style="display: flex; gap: 8px;">
+                      <a href="#" class="btn btn-secondary btn-sm" style="padding: 0.3rem 0.6rem; font-size: 0.75rem;" onclick="alert('Client decrypted download successful.')"><i class="fa-solid fa-download"></i></a>
+                      <a href="#" class="btn btn-secondary btn-sm" style="padding: 0.3rem 0.6rem; font-size: 0.75rem; color: #ef4444;" onclick="alert('File marked for node consensus purge.')"><i class="fa-solid fa-trash"></i></a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </main>
+    </div>
+
+  </div>
+
+  <!-- JavaScript Link -->
+  <script src="script.js"></script>
+</body>
+</html>

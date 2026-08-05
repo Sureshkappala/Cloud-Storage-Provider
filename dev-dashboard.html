@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stackly Developer Console - API configuration, webhook endpoints registry, and live endpoint testing tools.">
+  <title>Developer Console | Stackly Premium Cloud Storage</title>
+  
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- --- DASHBOARD FULL WORKSPACE --- -->
+  <div class="dashboard-layout">
+    
+    <!-- --- LEFT SIDEBAR DRAWER (DEVELOPER MODE) --- -->
+    <aside class="dashboard-sidebar">
+      <div style="width: 100%;">
+        <a href="index.html" class="dashboard-sidebar-logo" style="border-bottom: none; padding: 0;">
+          <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img">
+        </a>
+        <ul class="dashboard-sidebar-menu">
+          <li>
+            <a href="dev-dashboard.html" class="active">
+              <i class="fa-solid fa-code"></i> API &amp; Webhooks
+            </a>
+          </li>
+          <li>
+            <a href="dev-buckets.html">
+              <i class="fa-solid fa-cubes"></i> Bucket Clusters
+            </a>
+          </li>
+          <li>
+            <a href="dev-tokens.html">
+              <i class="fa-solid fa-key"></i> API Access Tokens
+            </a>
+          </li>
+          <li>
+            <a href="index.html">
+              <i class="fa-solid fa-globe"></i> Main Portal
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="dashboard-sidebar-footer">
+        <a href="login.html">
+          <i class="fa-solid fa-power-off"></i> Logout
+        </a>
+      </div>
+    </aside>
+
+    <!-- --- MAIN CONTENT CONSOLE --- -->
+    <div class="dashboard-main">
+      
+      <!-- --- STICKY CONSOLE HEADER --- -->
+      <header class="dashboard-header">
+        <div class="dashboard-header-left">
+          <button class="dashboard-toggle" aria-label="Open Sidebar Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="dashboard-breadcrumb">
+            Developer Console / <span>API &amp; Webhooks</span>
+          </div>
+        </div>
+        
+        <div class="dashboard-header-right">
+          <div class="dashboard-user-profile">
+            <img src="assets/avatar_elena.webp" alt="Elena Rostova">
+            <span>Elena Rostova (Dev)</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- --- SCROLLABLE WORKSPACE CONTENT --- -->
+      <main class="dashboard-content">
+        
+        <!-- --- ROW 1: QUICK METRICS CARDS --- -->
+        <div class="dashboard-metrics-grid">
+          <!-- Card 1: API requests -->
+          <div class="dashboard-metric-card">
+            <h4>API Request Volume</h4>
+            <div class="metric-val">14,562 / 20k</div>
+            <div class="progress-bar">
+              <div class="progress-bar-fill" style="width: 72.8%;"></div>
+            </div>
+            <div class="metric-sub">SLA Rate limit: <strong>72.8% consumed</strong></div>
+          </div>
+          
+          <!-- Card 2: Webhook Uptime -->
+          <div class="dashboard-metric-card">
+            <h4>Webhook Delivery SLA</h4>
+            <div class="metric-val" style="color: #10b981;">99.98%</div>
+            <div class="progress-bar">
+              <div class="progress-bar-fill" style="width: 99.9%; background: #10b981;"></div>
+            </div>
+            <div class="metric-sub">Failed retries: <strong>0 transactions</strong></div>
+          </div>
+
+          <!-- Card 3: Cryptographic Latency -->
+          <div class="dashboard-metric-card">
+            <h4>Decryption Overhead</h4>
+            <div class="metric-val" style="color: var(--accent-purple);">4.2ms</div>
+            <div class="progress-bar">
+              <div class="progress-bar-fill" style="width: 84%; background: var(--accent-purple);"></div>
+            </div>
+            <div class="metric-sub">Cipher standard: <strong>AES-GCM-256 optimized</strong></div>
+          </div>
+
+          <!-- Card 4: Connected Clusters -->
+          <div class="dashboard-metric-card">
+            <h4>Active Clusters</h4>
+            <div class="metric-val">5 Nodes</div>
+            <div class="progress-bar">
+              <div class="progress-bar-fill" style="width: 100%;"></div>
+            </div>
+            <div class="metric-sub">Consensus status: <strong>Replicating active</strong></div>
+          </div>
+        </div>
+
+        <!-- --- ROW 2: WEBHOOK REGISTRY & TESTER --- -->
+        <div class="dashboard-grid">
+          
+          <!-- Left: Webhooks table -->
+          <div class="dashboard-card">
+            <div class="dashboard-card-header">
+              <h3>Registered Webhook Endpoints</h3>
+              <button class="btn btn-secondary btn-sm" style="padding: 0.35rem 0.8rem; font-size: 0.75rem;" onclick="const url=prompt('Endpoint Target URL:'); if(url) alert('Webhook target registered.')">Add Endpoint</button>
+            </div>
+            <div class="dashboard-table-wrapper">
+              <table class="dashboard-table">
+                <thead>
+                  <tr>
+                    <th>Target URL</th>
+                    <th>Status</th>
+                    <th>Response Code</th>
+                    <th>Created</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="file-name-cell">
+                        <i class="fa-solid fa-link" style="color: var(--accent-cyan);"></i>
+                        <span>https://api.company.com/webhooks/storage</span>
+                      </div>
+                    </td>
+                    <td><span class="status-badge">Active</span></td>
+                    <td>200 OK</td>
+                    <td>12 days ago</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="file-name-cell">
+                        <i class="fa-solid fa-link" style="color: var(--accent-cyan);"></i>
+                        <span>https://slack.com/services/hooks/vault-alerts</span>
+                      </div>
+                    </td>
+                    <td><span class="status-badge">Active</span></td>
+                    <td>200 OK</td>
+                    <td>1 month ago</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Right: Webhook Tester simulation tool -->
+          <div class="dashboard-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="dashboard-card-header">
+              <h3>Live Webhook Simulator</h3>
+            </div>
+            
+            <div style="margin-bottom: 1rem;">
+              <label for="webhook-test-url" style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600;">Test Destination URL</label>
+              <input type="text" id="webhook-test-url" class="form-control" value="https://api.company.com/webhooks/storage" style="font-family: monospace; font-size: 0.85rem; width: 100%;" required>
+            </div>
+            
+            <div style="background: #040814; border: 1px solid #1e293b; border-radius: 4px; padding: 0.75rem; min-height: 90px; margin-bottom: 1rem; font-family: monospace; font-size: 0.75rem; color: #10b981; overflow-x: auto; white-space: pre-wrap;">
+<span style="color: var(--text-secondary);">[Console Output Log]</span>
+<div id="webhook-log-output">Ready to simulate transaction...</div>
+            </div>
+
+            <button class="btn btn-primary btn-sm" style="width: 100%;" onclick="
+              const logEl = document.getElementById('webhook-log-output');
+              logEl.innerHTML = 'Sending POST request with payload...\nHTTP/1.1 200 OK\n{\n  &quot;event&quot;: &quot;file.fragmented&quot;,\n  &quot;file_id&quot;: &quot;f_8a7d9&quot;,\n  &quot;status&quot;: &quot;replicated&quot;,\n  &quot;timestamp&quot;: ' + Date.now() + '\n}';
+            ">
+              <i class="fa-solid fa-paper-plane"></i> Trigger Mock Webhook
+            </button>
+          </div>
+
+        </div>
+
+      </main>
+    </div>
+
+  </div>
+
+  <!-- JavaScript Link -->
+  <script src="script.js"></script>
+</body>
+</html>
