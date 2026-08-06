@@ -133,7 +133,7 @@
         <div class="form-group">
           <label for="reg-role" class="form-label">Requested Role *</label>
           <div class="form-input-wrap">
-            <img src="assets/icon_security.webp" alt="User Shield" style="width: 24px; height: 24px; object-fit: contain;">
+            
             <select id="reg-role" class="form-control" style="background: rgba(4, 8, 20, 0.8); border: 1px solid #1c4e32; color: #fff; width: 100%; border-radius: 4px; outline: none; transition: border-color 0.2s;" required>
               <option value="user" selected>Client / User</option>
               <option value="developer">Developer / Engineer</option>
@@ -147,7 +147,7 @@
           <label for="reg-name" class="form-label">Full Name *</label>
           <div class="form-input-wrap">
             <i class="fa-solid fa-user"></i>
-            <input type="text" id="reg-name" class="form-control" placeholder="John Doe" required>
+            <input type="text" id="reg-name" class="form-control" placeholder="John Doe" required onkeypress="return /[A-Za-z\s]/.test(event.key)" oninput="this.value = this.value.replace(/[0-9]/g, '')">
           </div>
           <span class="validation-message"></span>
         </div>
@@ -167,7 +167,7 @@
           <label for="reg-phone" class="form-label">Mobile Number *</label>
           <div class="form-input-wrap">
             <i class="fa-solid fa-phone"></i>
-            <input type="tel" id="reg-phone" class="form-control" placeholder="9876543210" required>
+            <input type="tel" id="reg-phone" class="form-control" placeholder="9876543210" required onkeypress="return event.charCode >= 48 && event.charCode <= 57" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
           </div>
           <span class="validation-message"></span>
         </div>

@@ -134,7 +134,7 @@
           <!-- INTEGRATED MAP CARD -->
           <div class="glass-card" style="padding: 0.5rem; border-color: #1c4e32; margin-top: 2rem; height: 260px; overflow: hidden; position: relative;">
             <a href="https://maps.google.com/?q=100+Wall+Street,+New+York" target="_blank" style="position: absolute; top: 1rem; left: 1rem; z-index: 5; background: rgba(7, 9, 14, 0.85); color: var(--accent-cyan); border: 1px solid rgba(0, 229, 255, 0.2); padding: 0.35rem 0.75rem; border-radius: 4px; font-size: 0.75rem; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.25rem;"><i class="fa-solid fa-up-right-from-square"></i> Open in Maps</a>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.484257121759!2d-74.0083162!3d40.706173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a171eb2b4df%3A0xc3fec3f89cbbf2a1!2s100+Wall+St%2C+New+York%2C+NY+10005!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0; filter: grayscale(1) invert(0.9) contrast(1.2); border-radius: 4px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://maps.google.com/maps?q=100%20Wall%20Street,%20New%20York,%20NY%2010005&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0; filter: grayscale(1) invert(0.9) contrast(1.2); border-radius: 4px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
 
@@ -148,7 +148,7 @@
               <label for="form-name" class="form-label">Full Name *</label>
               <div class="form-input-wrap">
                 <i class="fa-solid fa-user"></i>
-                <input type="text" id="form-name" class="form-control" placeholder="John Doe" required>
+                <input type="text" id="form-name" class="form-control" placeholder="John Doe" required onkeypress="return /[A-Za-z\s]/.test(event.key)" oninput="this.value = this.value.replace(/[0-9]/g, '')">
               </div>
               <span class="validation-message"></span>
             </div>
@@ -168,7 +168,7 @@
               <label for="form-phone" class="form-label">Phone Number *</label>
               <div class="form-input-wrap">
                 <i class="fa-solid fa-phone"></i>
-                <input type="tel" id="form-phone" class="form-control" placeholder="9876543210" required>
+                <input type="tel" id="form-phone" class="form-control" placeholder="9876543210" required onkeypress="return event.charCode >= 48 && event.charCode <= 57" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
               </div>
               <span class="validation-message"></span>
             </div>
@@ -238,10 +238,13 @@
         <div class="footer-col">
           <h4>Quick Links</h4>
           <ul class="footer-links">
-            <li><a href="solutions.html" class="footer-link">Our Solutions</a></li>
-            <li><a href="pricing.html" class="footer-link">Pricing Plans</a></li>
-            <li><a href="about.html" class="footer-link">About Stackly</a></li>
-            <li><a href="features.html" class="footer-link">Features Log</a></li>
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="solutions.html" class="footer-link">Solutions</a></li>
+            <li><a href="features.html" class="footer-link">Features</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+            <li><a href="resources.html" class="footer-link">Resources</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
           </ul>
         </div>
 
