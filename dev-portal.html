@@ -84,8 +84,9 @@
 
       <!-- --- SCROLLABLE WORKSPACE CONTENT --- -->
       <main class="dashboard-content">
-        
-        <!-- --- ROW 1: DEVELOPER METRICS --- -->
+        <div class="dashboard-content-grid">
+          <div class="dashboard-workspace">
+            <!-- --- ROW 1: DEVELOPER METRICS --- -->
         <div class="dashboard-metrics-grid">
           <!-- API Queries -->
           <div class="dashboard-metric-card">
@@ -210,7 +211,9 @@
 
             <button class="btn btn-secondary btn-sm" style="width: 100%;" onclick="
               const logEl = document.getElementById('dev-telemetry-log');
-              logEl.innerHTML += '\n[' + new Date().toLocaleTimeString() + '] telemetry: API handshake completed with Frankfurt shard\n[' + new Date().toLocaleTimeString() + '] consensus: health index at 1.0';
+              logEl.innerHTML += '
+[' + new Date().toLocaleTimeString() + '] telemetry: API handshake completed with Frankfurt shard
+[' + new Date().toLocaleTimeString() + '] consensus: health index at 1.0';
               logEl.scrollTop = logEl.scrollHeight;
             ">
               <i class="fa-solid fa-arrows-rotate"></i> Poll Latest Shard Telemetry
@@ -218,7 +221,20 @@
           </div>
 
         </div>
-
+          </div>
+          
+          <div class="dashboard-side-panel">
+            <!-- Widget 1: SDK Libraries -->
+            <div class="dashboard-widget-card">
+              <h4><i class="fa-solid fa-book"></i> Active SDKs</h4>
+              <ul class="widget-checklist">
+                <li><span>Go Package</span><span style="color: var(--accent-cyan); font-weight: 600;">v2.4.1</span></li>
+                <li><span>Rust Crate</span><span style="color: var(--accent-cyan); font-weight: 600;">v1.9.0</span></li>
+                <li><span>Node.js Module</span><span style="color: var(--accent-cyan); font-weight: 600;">v3.1.2</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
 

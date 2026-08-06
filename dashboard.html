@@ -84,8 +84,9 @@
 
       <!-- --- SCROLLABLE WORKSPACE CONTENT --- -->
       <main class="dashboard-content">
-        
-        <!-- --- ROW 1: QUICK METRICS CARDS --- -->
+        <div class="dashboard-content-grid">
+          <div class="dashboard-workspace">
+            <!-- --- ROW 1: QUICK METRICS CARDS --- -->
         <div class="dashboard-metrics-grid">
           <!-- Card 1: Storage -->
           <div class="dashboard-metric-card">
@@ -221,7 +222,44 @@
           </div>
 
         </div>
-
+          </div>
+          
+          <div class="dashboard-side-panel">
+            <!-- Widget 1: Storage Quota -->
+            <div class="dashboard-widget-card">
+              <h4><i class="fa-solid fa-database"></i> Storage Limit</h4>
+              <div class="widget-rate-usage">
+                <div class="widget-rate-info">
+                  <span>Usage (45.6%)</span>
+                  <span>456.8 / 1000 GB</span>
+                </div>
+                <div class="progress-bar" style="height: 8px; margin-bottom: 0;">
+                  <div class="progress-bar-fill" style="width: 45.6%; background: var(--accent-cyan); height: 100%;"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Widget 2: Security Checklist -->
+            <div class="dashboard-widget-card">
+              <h4><i class="fa-solid fa-shield-halved"></i> Security Status</h4>
+              <ul class="widget-checklist">
+                <li><span>MFA Protection</span><span class="badge success">Active</span></li>
+                <li><span>Zero-Knowledge Key</span><span class="badge success">Backed Up</span></li>
+                <li><span>Audit Event Logs</span><span class="badge success">Locked</span></li>
+              </ul>
+            </div>
+            <!-- Widget 3: Sync Status -->
+            <div class="dashboard-widget-card">
+              <h4><i class="fa-solid fa-rotate"></i> Sync status</h4>
+              <div class="widget-rate-usage">
+                <div class="widget-rate-info">
+                  <span>Consensus Engine</span>
+                  <span style="color: #10b981; font-weight: 700;">Standby</span>
+                </div>
+                <p style="font-size: 0.78rem; color: var(--text-secondary); margin-top: 0.25rem;">Sync Latency is running at 14.5ms globally.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
 

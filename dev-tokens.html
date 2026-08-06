@@ -84,8 +84,9 @@
 
       <!-- --- SCROLLABLE WORKSPACE CONTENT --- -->
       <main class="dashboard-content">
-        
-        <div class="dashboard-grid">
+        <div class="dashboard-content-grid">
+          <div class="dashboard-workspace">
+            <div class="dashboard-grid">
           
           <!-- Left: Key Generator form -->
           <div class="dashboard-card">
@@ -170,7 +171,20 @@
           </div>
 
         </div>
-
+          </div>
+          
+          <div class="dashboard-side-panel">
+            <!-- Widget 1: Token Permissions -->
+            <div class="dashboard-widget-card">
+              <h4><i class="fa-solid fa-key"></i> Key Scopes</h4>
+              <ul class="widget-checklist">
+                <li><span>read:buckets</span><span class="badge success">Allowed</span></li>
+                <li><span>write:buckets</span><span class="badge success">Allowed</span></li>
+                <li><span>delete:buckets</span><span class="badge warning">Restricted</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
 

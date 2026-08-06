@@ -84,8 +84,9 @@
 
       <!-- --- SCROLLABLE WORKSPACE CONTENT --- -->
       <main class="dashboard-content">
-        
-        <!-- --- FILE CONTROLS --- -->
+        <div class="dashboard-content-grid">
+          <div class="dashboard-workspace">
+            <!-- --- FILE CONTROLS --- -->
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
           <div style="display: flex; align-items: center; gap: 0.5rem;">
             <a href="404.html" class="btn btn-secondary btn-sm" style="padding: 0.5rem 1rem;"><i class="fa-solid fa-arrow-up"></i> Up</a>
@@ -211,7 +212,45 @@
             </table>
           </div>
         </div>
-
+          </div>
+          
+          <div class="dashboard-side-panel">
+            <!-- Widget 1: Transfer Speeds -->
+            <div class="dashboard-widget-card">
+              <h4><i class="fa-solid fa-gauge-high"></i> Speed Analyzer</h4>
+              <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                <div class="widget-rate-usage">
+                  <div class="widget-rate-info"><span>Upload speed</span><span>142.5 MB/s</span></div>
+                  <div class="progress-bar" style="height: 6px;"><div class="progress-bar-fill" style="width: 75%; background: var(--accent-cyan); height: 100%;"></div></div>
+                </div>
+                <div class="widget-rate-usage">
+                  <div class="widget-rate-info"><span>Download speed</span><span>284.1 MB/s</span></div>
+                  <div class="progress-bar" style="height: 6px;"><div class="progress-bar-fill" style="width: 90%; background: var(--accent-purple); height: 100%;"></div></div>
+                </div>
+              </div>
+            </div>
+            <!-- Widget 2: Recent Activity -->
+            <div class="dashboard-widget-card">
+              <h4><i class="fa-solid fa-clock-rotate-left"></i> File Activity</h4>
+              <ul class="widget-checklist" style="gap: 0.5rem;">
+                <li style="justify-content: flex-start; gap: 8px;">
+                  <i class="fa-solid fa-file-arrow-up" style="color: var(--accent-cyan);"></i>
+                  <div style="font-size: 0.78rem; text-align: left;">
+                    <div style="color: #fff; font-weight: 600;">Marketing_Brief.pdf</div>
+                    <div style="font-size: 0.7rem; color: var(--text-secondary);">Uploaded 12m ago</div>
+                  </div>
+                </li>
+                <li style="justify-content: flex-start; gap: 8px;">
+                  <i class="fa-solid fa-file-shield" style="color: var(--accent-purple);"></i>
+                  <div style="font-size: 0.78rem; text-align: left;">
+                    <div style="color: #fff; font-weight: 600;">Config_Backup.enc</div>
+                    <div style="font-size: 0.7rem; color: var(--text-secondary);">Encrypted 45m ago</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
 

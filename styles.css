@@ -2549,3 +2549,242 @@ textarea.form-control {
   }
 }
 
+/* ==========================================================================
+   THREE-COLUMN DASHBOARD GRID & EXPANSION MODULES
+   ========================================================================== */
+.dashboard-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2rem;
+  align-items: start;
+  width: 100%;
+}
+
+.dashboard-workspace {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.dashboard-side-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.dashboard-widget-card {
+  background: var(--bg-card);
+  border: 1px solid #1c4e32;
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+}
+
+.dashboard-widget-card h4 {
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #1c4e32;
+  padding-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dashboard-widget-card h4 i {
+  color: var(--accent-cyan);
+}
+
+/* Security checklist widget styles */
+.widget-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.widget-checklist li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.widget-checklist li span.badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.widget-checklist li span.badge.success {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.widget-checklist li span.badge.warning {
+  background: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+/* Device lists styles */
+.widget-device-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.widget-device-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.85rem;
+}
+
+.widget-device-icon {
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #1c4e32;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-cyan);
+}
+
+.widget-device-info h5 {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 0.1rem;
+}
+
+.widget-device-info p {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+}
+
+/* Rate usage bar */
+.widget-rate-usage {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.widget-rate-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* Action buttons */
+.widget-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Compliance grid */
+.compliance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+/* Timeline elements */
+.timeline-flow {
+  position: relative;
+  max-width: 800px;
+  margin: 3rem auto 0 auto;
+  padding: 1rem 0;
+}
+
+.timeline-flow::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: #1c4e32;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.timeline-node {
+  padding: 10px 40px;
+  position: relative;
+  background-inherit: inherit;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.timeline-node::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  right: -8px;
+  background-color: var(--accent-cyan);
+  border: 4px solid #123d25;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-node.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-node.right {
+  left: 50%;
+}
+
+.timeline-node.right::after {
+  left: -8px;
+}
+
+.timeline-node-content {
+  padding: 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid #1c4e32;
+  position: relative;
+  border-radius: var(--radius-sm);
+}
+
+/* Responsive grid media overrides */
+@media (max-width: 1024px) {
+  .dashboard-content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-flow::after {
+    left: 31px;
+  }
+  .timeline-node {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  .timeline-node::after {
+    left: 23px;
+  }
+  .timeline-node.left {
+    left: 0;
+    text-align: left;
+  }
+  .timeline-node.right {
+    left: 0;
+  }
+}
+

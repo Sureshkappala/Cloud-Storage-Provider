@@ -84,8 +84,9 @@
 
       <!-- --- SCROLLABLE WORKSPACE CONTENT --- -->
       <main class="dashboard-content">
-        
-        <!-- --- ROW 1: QUICK METRICS CARDS --- -->
+        <div class="dashboard-content-grid">
+          <div class="dashboard-workspace">
+            <!-- --- ROW 1: QUICK METRICS CARDS --- -->
         <div class="dashboard-metrics-grid">
           <!-- Card 1: API requests -->
           <div class="dashboard-metric-card">
@@ -193,14 +194,45 @@
 
             <button class="btn btn-primary btn-sm" style="width: 100%;" onclick="
               const logEl = document.getElementById('webhook-log-output');
-              logEl.innerHTML = 'Sending POST request with payload...\nHTTP/1.1 200 OK\n{\n  &quot;event&quot;: &quot;file.fragmented&quot;,\n  &quot;file_id&quot;: &quot;f_8a7d9&quot;,\n  &quot;status&quot;: &quot;replicated&quot;,\n  &quot;timestamp&quot;: ' + Date.now() + '\n}';
+              logEl.innerHTML = 'Sending POST request with payload...
+HTTP/1.1 200 OK
+{
+  &quot;event&quot;: &quot;file.fragmented&quot;,
+  &quot;file_id&quot;: &quot;f_8a7d9&quot;,
+  &quot;status&quot;: &quot;replicated&quot;,
+  &quot;timestamp&quot;: ' + Date.now() + '
+}';
             ">
               <i class="fa-solid fa-paper-plane"></i> Trigger Mock Webhook
             </button>
           </div>
 
         </div>
-
+          </div>
+          
+          <div class="dashboard-side-panel">
+            <!-- Widget 1: API Consumption -->
+            <div class="dashboard-widget-card">
+              <h4><i class="fa-solid fa-code"></i> API Quota</h4>
+              <div class="widget-rate-usage">
+                <div class="widget-rate-info">
+                  <span>API Request Rate</span>
+                  <span>2,450 / 10,000</span>
+                </div>
+                <div class="progress-bar" style="height: 6px;"><div class="progress-bar-fill" style="width: 24.5%; background: var(--accent-cyan); height: 100%;"></div></div>
+              </div>
+            </div>
+            <!-- Widget 2: Regional Pings -->
+            <div class="dashboard-widget-card">
+              <h4><i class="fa-solid fa-network-wired"></i> Region Latency</h4>
+              <ul class="widget-checklist">
+                <li><span>US-West (Oregon)</span><span style="color: #10b981; font-weight: 700;">12ms</span></li>
+                <li><span>EU-Central (Frankfurt)</span><span style="color: #10b981; font-weight: 700;">18ms</span></li>
+                <li><span>Asia-East (Tokyo)</span><span style="color: #10b981; font-weight: 700;">24ms</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
 

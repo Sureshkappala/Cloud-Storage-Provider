@@ -84,8 +84,9 @@
 
       <!-- --- SCROLLABLE WORKSPACE CONTENT --- -->
       <main class="dashboard-content">
-        
-        <div class="dashboard-grid">
+        <div class="dashboard-content-grid">
+          <div class="dashboard-workspace">
+            <div class="dashboard-grid">
           
           <!-- Left: Account & Cryptographic Profile Settings -->
           <div class="dashboard-card">
@@ -185,7 +186,33 @@
           </div>
 
         </div>
-
+          </div>
+          
+          <div class="dashboard-side-panel">
+            <!-- Widget 1: Account Health -->
+            <div class="dashboard-widget-card">
+              <h4><i class="fa-solid fa-user-shield"></i> Account Status</h4>
+              <ul class="widget-checklist">
+                <li><span>Security Level</span><span class="badge success">Premium</span></li>
+                <li><span>Storage Upgrade</span><span class="badge success">Eligible</span></li>
+              </ul>
+            </div>
+            <!-- Widget 2: Connected Devices -->
+            <div class="dashboard-widget-card">
+              <h4><i class="fa-solid fa-laptop"></i> Devices</h4>
+              <div class="widget-device-list">
+                <div class="widget-device-item">
+                  <div class="widget-device-icon"><i class="fa-solid fa-desktop"></i></div>
+                  <div class="widget-device-info" style="text-align: left;"><h5>Office iMac</h5><p>Authorized • Active now</p></div>
+                </div>
+                <div class="widget-device-item">
+                  <div class="widget-device-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                  <div class="widget-device-info" style="text-align: left;"><h5>iPhone 15 Pro</h5><p>Authorized • 2h ago</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
 

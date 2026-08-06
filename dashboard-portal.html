@@ -84,8 +84,9 @@
 
       <!-- --- SCROLLABLE WORKSPACE CONTENT --- -->
       <main class="dashboard-content">
-        
-        <!-- --- ROW 1: ECOSYSTEM WIDE METRICS --- -->
+        <div class="dashboard-content-grid">
+          <div class="dashboard-workspace">
+            <!-- --- ROW 1: ECOSYSTEM WIDE METRICS --- -->
         <div class="dashboard-metrics-grid">
           <!-- Global Storage -->
           <div class="dashboard-metric-card">
@@ -217,7 +218,20 @@
           </div>
 
         </div>
-
+          </div>
+          
+          <div class="dashboard-side-panel">
+            <!-- Widget 1: Consensus Ledger -->
+            <div class="dashboard-widget-card">
+              <h4><i class="fa-solid fa-cube"></i> Consensus Core</h4>
+              <ul class="widget-checklist">
+                <li><span>Network Block</span><span style="color: #fff; font-family: monospace;">#14,529,882</span></li>
+                <li><span>Active Validators</span><span style="color: #fff;">142 / 150</span></li>
+                <li><span>SLA Health</span><span class="badge success">99.999%</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
 

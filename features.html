@@ -202,6 +202,28 @@
     </div>
   </section>
 
+  <!-- --- NEW SECTION: DEVELOPER CLI SNIPPETS --- -->
+  <section class="section" style="border-top: 1px solid #1c4e32; background: #123d25;">
+    <div class="container">
+      <div class="section-header reveal active">
+        <span class="section-tag">CLI Integration</span>
+        <h2 class="section-title">Command Line Interface Guides</h2>
+        <p class="section-desc">Automate your backups and manage sharded buckets directly using the Stackly terminal client.</p>
+      </div>
+      <div class="glass-panel reveal active" style="padding: 2rem; background: #0c2b1a; border: 1px solid #1c4e32; border-radius: var(--radius-sm); margin-top: 2rem;">
+        <h4 style="color: #fff; margin-bottom: 1rem;"><i class="fa-solid fa-code" style="color: var(--accent-cyan); margin-right: 8px;"></i> Upload Bucket Assets</h4>
+        <pre style="background: rgba(4,8,20,0.8); padding: 1.25rem; border-radius: 4px; color: var(--accent-cyan); font-family: monospace; font-size: 0.9rem; overflow-x: auto; border: 1px solid #1c4e32; margin: 0;"># Initialize client with local zero-knowledge private key
+$ stackly login --keyfile ~/.stackly/private.key
+
+# Create a secure decentralized storage bucket
+$ stackly bucket create my-backups --region global
+
+# Encrypt, shard, and upload build folder files
+$ stackly upload ./build/ bucket://my-backups/release-v2.0/</pre>
+      </div>
+    </div>
+  </section>
+
     <!-- --- FOOTER --- -->
   <footer class="footer">
     <div class="container">
