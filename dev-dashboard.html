@@ -20,9 +20,18 @@
     <!-- --- LEFT SIDEBAR DRAWER (DEVELOPER MODE) --- -->
     <aside class="dashboard-sidebar">
       <div style="width: 100%;">
-        <a href="dev-dashboard.html" class="dashboard-sidebar-logo" style="border-bottom: none; padding: 0;">
+        <a href="dev-dashboard.html" class="dashboard-sidebar-logo" style="border-bottom: none; padding: 0; margin-bottom: 1.5rem;">
           <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img">
         </a>
+        
+        <!-- User Profile Card (Left Side Top) -->
+        <div class="sidebar-user-profile" style="display: flex; align-items: center; gap: 10px; margin-bottom: 2rem; padding: 0.5rem 0.75rem; background: rgba(255,255,255,0.02); border: 1px solid #1e293b; border-radius: var(--radius-xs);">
+          <img src="assets/avatar_elena.webp" alt="User Avatar" class="sidebar-avatar" style="width: 32px; height: 32px; border-radius: 50%; border: 1.5px solid var(--accent-cyan); object-fit: cover;">
+          <div style="min-width: 0;">
+            <span class="sidebar-username" style="color: #fff; font-size: 0.85rem; font-weight: 600; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Elena Rostova</span>
+            <span class="sidebar-userrole" style="color: var(--text-secondary); font-size: 0.7rem; display: block;">Developer / Engineer</span>
+          </div>
+        </div>
         <ul class="dashboard-sidebar-menu">
           <li>
             <a href="dev-dashboard.html" class="active">
@@ -69,10 +78,7 @@
         </div>
         
         <div class="dashboard-header-right">
-          <div class="dashboard-user-profile">
-            <img src="assets/avatar_elena.webp" alt="Elena Rostova">
-            <span>Elena Rostova (Dev)</span>
-          </div>
+          <!-- Profile removed from top-right to display at left-side top sidebar instead -->
         </div>
       </header>
 

@@ -242,6 +242,10 @@
           if (emailValid && passValid) {
             const roleSelect = document.getElementById('login-role');
             const selectedRole = roleSelect ? roleSelect.value : 'user';
+            
+            localStorage.setItem('login_email', emailInput.value);
+            localStorage.setItem('login_role', selectedRole);
+            
             if (selectedRole === 'developer') {
               window.location.href = 'dev-dashboard.html';
             } else {

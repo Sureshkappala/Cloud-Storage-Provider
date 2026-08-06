@@ -469,4 +469,41 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // --- 14. DYNAMIC DASHBOARD SIDEBAR USER CREDENTIALS ---
+  const sidebarUsername = document.querySelector('.sidebar-username');
+  const sidebarUserrole = document.querySelector('.sidebar-userrole');
+  const sidebarAvatar = document.querySelector('.sidebar-avatar');
+
+  if (sidebarUsername || sidebarAvatar) {
+    const email = localStorage.getItem('login_email') || 'sarah.jenkins@corp.stackly.com';
+    const role = localStorage.getItem('login_role') || (window.location.pathname.includes('dev-') ? 'developer' : 'user');
+
+    let displayName = 'Sarah Jenkins';
+    let avatarPath = 'assets/avatar_sarah.webp';
+    let roleTitle = 'Client / User';
+
+    if (role === 'developer') {
+      displayName = 'Elena Rostova';
+      avatarPath = 'assets/avatar_elena.webp';
+      roleTitle = 'Developer / Engineer';
+    } else if (role === 'admin') {
+      displayName = 'Julian Vance';
+      avatarPath = 'assets/avatar_david.webp';
+      roleTitle = 'System Administrator';
+    }
+
+    if (email && !email.includes('sarah.jenkins') && !email.includes('elena.rostova') && !email.includes('julian.vance')) {
+      const prefix = email.split('@')[0];
+      const parts = prefix.split(/[._+-]/);
+      displayName = parts.map(p => p.charAt(0).toUpperCase() + p.slice(1)).join(' ');
+    }
+
+    if (sidebarUsername) sidebarUsername.innerText = displayName;
+    if (sidebarUserrole) sidebarUserrole.innerText = roleTitle;
+    if (sidebarAvatar) {
+      sidebarAvatar.src = avatarPath;
+      sidebarAvatar.alt = displayName;
+    }
+  }
+
 });
