@@ -2,15 +2,15 @@
 
 /* --- CUSTOM VARIABLES & DESIGN SYSTEM (ENTERPRISE MINIMALIST) --- */
 :root {
-  --bg-main: #07090e;         /* Clean Solid Midnight Navy */
-  --bg-card: #0c101b;         /* Solid Dark Navy Card */
-  --bg-nav: #07090e;          /* Solid Header Match */
+  --bg-main: #0c1f15;         /* Premium Visible Dark Forest Green */
+  --bg-card: #122b1e;         /* Premium Forest Green Card */
+  --bg-nav: #0c1f15;          /* Premium Forest Match */
   --accent-cyan: #00f59f;     /* Vibrant Neon Mint Accent */
   --accent-purple: #10b981;   /* Vibrant Emerald Accent */
   --accent-blue: #059669;     /* Deep Forest Accent */
   --text-primary: #ffffff;    /* High Contrast White */
-  --text-secondary: #94a3b8;  /* Readable Slate Secondary */
-  --text-dark: #07090e;
+  --text-secondary: #a3b8ab;  /* Mint-tinted Slate Secondary */
+  --text-dark: #0c1f15;
   
   --grad-primary: linear-gradient(135deg, #00f59f 0%, #059669 100%);
   --grad-purple: linear-gradient(135deg, #10b981 0%, #059669 100%);
@@ -106,7 +106,7 @@ input, button, select, textarea {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #1b3d2b;
   border-radius: 0;
 }
 
@@ -222,7 +222,7 @@ input, button, select, textarea {
   background: var(--bg-card);
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
-  border: 1px solid #1e293b; /* Thin crisp border */
+  border: 1px solid #1b3d2b; /* Thin crisp border */
   border-radius: var(--radius-sm);
   padding: 2.2rem;
   box-shadow: var(--shadow-sm);
@@ -259,7 +259,7 @@ input, button, select, textarea {
   width: 100%;
   z-index: 1000;
   background: var(--bg-nav);
-  border-bottom: 1px solid #1e293b;
+  border-bottom: 1px solid #1b3d2b;
   transition: padding var(--transition-fast);
   padding: 1.25rem 0;
 }
@@ -267,7 +267,7 @@ input, button, select, textarea {
 .header.scrolled {
   padding: 0.85rem 0;
   border-bottom: 1px solid rgba(0, 229, 255, 0.3);
-  background: #07090e;
+  background: #0c1f15;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
@@ -375,7 +375,7 @@ input, button, select, textarea {
   padding: 9rem 0 6rem 0;
   position: relative;
   z-index: 1;
-  background-image: linear-gradient(180deg, rgba(7, 9, 14, 0.75) 0%, #07090e 100%), url('assets/hero_bg.webp');
+  background-image: linear-gradient(180deg, rgba(7, 9, 14, 0.75) 0%, #0c1f15 100%), url('assets/hero_bg.webp');
   background-size: cover;
   background-position: center;
 }
@@ -486,7 +486,7 @@ input, button, select, textarea {
   gap: 1.25rem;
   padding: 2rem;
   align-items: flex-end;
-  border-color: #1e293b;
+  border-color: #1b3d2b;
 }
 
 .estimation-form .form-group {
@@ -519,8 +519,8 @@ input, button, select, textarea {
 
 .form-control {
   width: 100%;
-  background: #07090e;
-  border: 1px solid #1e293b;
+  background: #0c1f15;
+  border: 1px solid #1b3d2b;
   border-radius: var(--radius-sm);
   padding: 0.8rem 1rem 0.8rem 2.6rem;
   color: var(--text-primary);
@@ -568,8 +568,8 @@ select.form-control {
   gap: 1.25rem;
   align-items: flex-start;
   padding: 1.25rem;
-  background: #0c101b;
-  border: 1px solid #1e293b;
+  background: #122b1e;
+  border: 1px solid #1b3d2b;
   border-radius: var(--radius-sm);
 }
 
@@ -659,7 +659,7 @@ select.form-control {
   position: relative;
   width: 54px;
   height: 28px;
-  background: #1e293b;
+  background: #1b3d2b;
   border-radius: 14px;
   cursor: pointer;
   border: 1px solid #334155;
@@ -715,7 +715,7 @@ select.form-control {
 }
 
 .plan-header {
-  border-bottom: 1px solid #1e293b;
+  border-bottom: 1px solid #1b3d2b;
   padding-bottom: 1.5rem;
   margin-bottom: 1.5rem;
   text-align: center;
@@ -795,7 +795,7 @@ select.form-control {
 .interactive-mockup {
   position: relative;
   background: var(--bg-card);
-  border: 1px solid #1e293b;
+  border: 1px solid #1b3d2b;
   border-radius: var(--radius-sm);
   padding: 1.5rem;
   box-shadow: var(--shadow-sm);
@@ -821,7 +821,7 @@ select.form-control {
   padding: 0.8rem 1.2rem;
   border-radius: var(--radius-sm);
   background: var(--bg-main);
-  border: 1px solid #1e293b;
+  border: 1px solid #1b3d2b;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -894,7 +894,7 @@ select.form-control {
   top: 36px;
   bottom: -22px;
   width: 1px;
-  background: #1e293b;
+  background: #1b3d2b;
 }
 
 .timeline-step:last-child::before {
@@ -905,7 +905,7 @@ select.form-control {
   width: 36px;
   height: 36px;
   border-radius: var(--radius-xs);
-  background: #1e293b;
+  background: #1b3d2b;
   border: 1px solid #334155;
   display: flex;
   align-items: center;
@@ -922,8 +922,8 @@ select.form-control {
 }
 
 .step-details {
-  background: #07090e;
-  border: 1px solid #1e293b;
+  background: #0c1f15;
+  border: 1px solid #1b3d2b;
   border-radius: var(--radius-xs);
   padding: 0.8rem 1.2rem;
   flex-grow: 1;
@@ -978,10 +978,10 @@ select.form-control {
   display: flex;
   align-items: center;
   gap: 1rem;
-  background: #07090e;
+  background: #0c1f15;
   padding: 0.75rem 1.1rem;
   border-radius: var(--radius-xs);
-  border: 1px solid #1e293b;
+  border: 1px solid #1b3d2b;
 }
 
 .member-avatar {
@@ -1020,8 +1020,8 @@ select.form-control {
 /* --- PERFORMANCE STATISTICS --- */
 .stats {
   background: var(--bg-card);
-  border-top: 1px solid #1e293b;
-  border-bottom: 1px solid #1e293b;
+  border-top: 1px solid #1b3d2b;
+  border-bottom: 1px solid #1b3d2b;
   padding: 5rem 0;
 }
 
@@ -1067,7 +1067,7 @@ select.form-control {
 
 .testimonial-card {
   background: var(--bg-card);
-  border: 1px solid #1e293b;
+  border: 1px solid #1b3d2b;
   border-radius: var(--radius-sm);
   padding: 3rem;
   position: relative;
@@ -1141,7 +1141,7 @@ select.form-control {
 
 .faq-item {
   background: var(--bg-card);
-  border: 1px solid #1e293b;
+  border: 1px solid #1b3d2b;
   border-radius: var(--radius-sm);
   overflow: hidden;
   transition: all var(--transition-fast);
@@ -1356,7 +1356,7 @@ select.form-control {
   background: var(--bg-card);
   border-radius: var(--radius-sm);
   padding: 2.5rem;
-  border: 1px solid #1e293b;
+  border: 1px solid #1b3d2b;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -1442,7 +1442,7 @@ textarea.form-control {
 
 .success-modal {
   background: var(--bg-card);
-  border: 1px solid #1e293b;
+  border: 1px solid #1b3d2b;
   border-radius: var(--radius-sm);
   padding: 2.5rem;
   max-width: 440px;
@@ -1485,7 +1485,7 @@ textarea.form-control {
 /* --- FOOTER --- */
 .footer {
   background: #04060b;
-  border-top: 1px solid #1e293b;
+  border-top: 1px solid #1b3d2b;
   padding: 5rem 0 2rem 0;
 }
 
@@ -1576,7 +1576,7 @@ textarea.form-control {
 
 .footer-newsletter-wrap input {
   background: rgba(4, 8, 20, 0.8);
-  border: 1px solid #1e293b;
+  border: 1px solid #1b3d2b;
   color: #fff;
   padding: 0.65rem 1rem;
   border-radius: 4px;
@@ -1592,7 +1592,7 @@ textarea.form-control {
 
 .footer-newsletter-wrap button {
   background: #00e5ff;
-  color: #07090e;
+  color: #0c1f15;
   font-weight: 700;
   border: none;
   padding: 0.65rem 1.25rem;
@@ -1606,7 +1606,7 @@ textarea.form-control {
 }
 
 .footer-bottom {
-  border-top: 1px solid #1e293b;
+  border-top: 1px solid #1b3d2b;
   padding-top: 1.75rem;
   display: flex;
   justify-content: space-between;
@@ -1777,8 +1777,8 @@ textarea.form-control {
     width: 300px;
     max-width: 85vw;
     height: 100vh;
-    background: #0c101b;
-    border-left: 1px solid #1e293b;
+    background: #122b1e;
+    border-left: 1px solid #1b3d2b;
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-start;
@@ -1798,7 +1798,7 @@ textarea.form-control {
     align-items: center;
     justify-content: space-between;
     padding-bottom: 1rem;
-    border-bottom: 1px solid #1e293b;
+    border-bottom: 1px solid #1b3d2b;
     margin-bottom: 1.5rem;
   }
   
@@ -1827,7 +1827,7 @@ textarea.form-control {
   .drawer-search input {
     width: 100%;
     background: var(--bg-main);
-    border: 1px solid #1e293b;
+    border: 1px solid #1b3d2b;
     padding: 0.65rem 0.9rem;
     border-radius: var(--radius-sm);
     color: var(--text-primary);
@@ -1883,7 +1883,7 @@ textarea.form-control {
   
   .drawer-contact-info {
     display: block;
-    border-top: 1px solid #1e293b;
+    border-top: 1px solid #1b3d2b;
     padding-top: 1.25rem;
   }
   
@@ -2070,7 +2070,7 @@ textarea.form-control {
   display: grid;
   grid-template-columns: 260px 1fr;
   min-height: 100vh;
-  background: #07090e;
+  background: #0c1f15;
   position: relative;
 }
 
@@ -2078,8 +2078,8 @@ textarea.form-control {
   position: sticky;
   top: 0;
   height: 100vh;
-  background: #0c101b;
-  border-right: 1px solid #1e293b;
+  background: #122b1e;
+  border-right: 1px solid #1b3d2b;
   padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
@@ -2099,7 +2099,7 @@ textarea.form-control {
   color: #fff;
   margin-bottom: 2.5rem;
   padding: 0.5rem;
-  border-bottom: 1px solid #1e293b;
+  border-bottom: 1px solid #1b3d2b;
 }
 
 .dashboard-sidebar-logo i {
@@ -2148,7 +2148,7 @@ textarea.form-control {
 }
 
 .dashboard-sidebar-footer {
-  border-top: 1px solid #1e293b;
+  border-top: 1px solid #1b3d2b;
   padding-top: 1.5rem;
 }
 
@@ -2179,8 +2179,8 @@ textarea.form-control {
 
 .dashboard-header {
   height: 70px;
-  background: #0c101b;
-  border-bottom: 1px solid #1e293b;
+  background: #122b1e;
+  border-bottom: 1px solid #1b3d2b;
   padding: 0 2rem;
   display: flex;
   align-items: center;
@@ -2266,7 +2266,7 @@ textarea.form-control {
 
 .dashboard-metric-card {
   background: var(--bg-card);
-  border: 1px solid #1e293b;
+  border: 1px solid #1b3d2b;
   border-radius: var(--radius-sm);
   padding: 1.5rem;
   position: relative;
@@ -2323,7 +2323,7 @@ textarea.form-control {
 
 .dashboard-card {
   background: var(--bg-card);
-  border: 1px solid #1e293b;
+  border: 1px solid #1b3d2b;
   border-radius: var(--radius-sm);
   padding: 1.5rem;
 }
@@ -2334,7 +2334,7 @@ textarea.form-control {
   justify-content: space-between;
   margin-bottom: 1.5rem;
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid #1e293b;
+  border-bottom: 1px solid #1b3d2b;
 }
 
 .dashboard-card-header h3 {
@@ -2344,7 +2344,7 @@ textarea.form-control {
 }
 
 .dashboard-upload-zone {
-  border: 2px dashed #1e293b;
+  border: 2px dashed #1b3d2b;
   border-radius: var(--radius-sm);
   padding: 2.5rem 1.5rem;
   text-align: center;
@@ -2395,7 +2395,7 @@ textarea.form-control {
   color: var(--text-secondary);
   font-weight: 600;
   font-size: 0.85rem;
-  border-bottom: 1px solid #1e293b;
+  border-bottom: 1px solid #1b3d2b;
   text-transform: uppercase;
 }
 
@@ -2403,7 +2403,7 @@ textarea.form-control {
   padding: 1rem;
   color: #fff;
   font-size: 0.9rem;
-  border-bottom: 1px solid #0c101b;
+  border-bottom: 1px solid #122b1e;
 }
 
 .dashboard-table tr:last-child td {
@@ -2458,7 +2458,7 @@ textarea.form-control {
 
 .folder-card {
   background: rgba(255, 255, 255, 0.02);
-  border: 1px solid #1e293b;
+  border: 1px solid #1b3d2b;
   border-radius: var(--radius-xs);
   padding: 1.25rem 1rem;
   display: flex;
