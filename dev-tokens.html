@@ -93,7 +93,7 @@
               <h3>Generate API Access Key</h3>
             </div>
             
-            <form id="token-generator-form" onsubmit="event.preventDefault();">
+            <form id="token-generator-form" action="404.html" method="GET" >
               <div class="form-group" style="margin-bottom: 1.25rem;">
                 <label for="token-name" style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600;">Access Key Name / Label</label>
                 <div class="form-input-wrap" style="position: relative;">
@@ -161,7 +161,7 @@
                     <td><code style="color: var(--accent-cyan); font-size: 0.8rem;">full_access</code></td>
                     <td><span class="status-badge">Active</span></td>
                     <td>
-                      <button class="btn btn-secondary btn-sm" style="padding: 0.35rem 0.6rem; font-size: 0.7rem; color: #ef4444;" onclick="this.closest('tr').remove(); alert('API credentials revoked.');"><i class="fa-solid fa-ban"></i> Revoke</button>
+                      <button class="btn btn-secondary btn-sm" style="padding: 0.35rem 0.6rem; font-size: 0.7rem; color: #ef4444;" onclick="location.href='404.html'"tr').remove(); alert('API credentials revoked.');"><i class="fa-solid fa-ban"></i> Revoke</button>
                     </td>
                   </tr>
                 </tbody>
@@ -217,7 +217,7 @@
             <td><code style="color: var(--accent-cyan); font-size: 0.8rem;">${scope}</code></td>
             <td><span class="status-badge">Active</span></td>
             <td>
-              <button class="btn btn-secondary btn-sm" style="padding: 0.35rem 0.6rem; font-size: 0.7rem; color: #ef4444;" onclick="this.closest('tr').remove(); alert('API credentials revoked.');"><i class="fa-solid fa-ban"></i> Revoke</button>
+              <button class="btn btn-secondary btn-sm" style="padding: 0.35rem 0.6rem; font-size: 0.7rem; color: #ef4444;" onclick="location.href='404.html'"tr').remove(); alert('API credentials revoked.');"><i class="fa-solid fa-ban"></i> Revoke</button>
             </td>
           `;
           tableBody.appendChild(tr);
