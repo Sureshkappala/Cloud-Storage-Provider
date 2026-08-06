@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Stackly Decentralized Console - Storage metrics, active node connections, recent upload logs, and key credentials settings.">
-  <title>Dashboard Console | Stackly Premium Cloud Storage</title>
+  <meta name="description" content="Stackly Console - Global network status and decentralized storage nodes ecosystem.">
+  <title>Main Portal | Stackly Console</title>
   
   <!-- FontAwesome for Premium Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -25,7 +25,7 @@
         </a>
         <ul class="dashboard-sidebar-menu">
           <li>
-            <a href="dashboard.html" class="active">
+            <a href="dashboard.html">
               <i class="fa-solid fa-gauge"></i> Overview
             </a>
           </li>
@@ -40,7 +40,7 @@
             </a>
           </li>
           <li>
-            <a href="dashboard-portal.html">
+            <a href="dashboard-portal.html" class="active">
               <i class="fa-solid fa-globe"></i> Main Portal
             </a>
           </li>
@@ -64,7 +64,7 @@
             <i class="fa-solid fa-bars"></i>
           </button>
           <div class="dashboard-breadcrumb">
-            Console / <span>Overview</span>
+            Console / <span>Main Portal</span>
           </div>
         </div>
         
@@ -79,66 +79,55 @@
       <!-- --- SCROLLABLE WORKSPACE CONTENT --- -->
       <main class="dashboard-content">
         
-        <!-- --- ROW 1: QUICK METRICS CARDS --- -->
+        <!-- --- ROW 1: ECOSYSTEM WIDE METRICS --- -->
         <div class="dashboard-metrics-grid">
-          <!-- Card 1: Storage -->
+          <!-- Global Storage -->
           <div class="dashboard-metric-card">
-            <h4>Storage Capacity</h4>
-            <div class="metric-val">456.8 GB</div>
+            <h4>Global Storage pool</h4>
+            <div class="metric-val">45.8 PB</div>
             <div class="progress-bar">
-              <div class="progress-bar-fill" style="width: 45.6%;"></div>
+              <div class="progress-bar-fill" style="width: 45.8%; background: var(--accent-cyan);"></div>
             </div>
-            <div class="metric-sub">Used: <strong>45.6%</strong> of 1,000 GB SLA limit</div>
+            <div class="metric-sub">Allocated: <strong>45.8%</strong> of 100 PB capacity</div>
           </div>
           
-          <!-- Card 2: SLA Status -->
+          <!-- Nodes Online -->
           <div class="dashboard-metric-card">
-            <h4>Network Uptime</h4>
-            <div class="metric-val" style="color: #10b981;">99.999%</div>
+            <h4>Active Storage Nodes</h4>
+            <div class="metric-val" style="color: #10b981;">8,412 Online</div>
             <div class="progress-bar">
               <div class="progress-bar-fill" style="width: 100%; background: #10b981;"></div>
             </div>
-            <div class="metric-sub">Connected: <strong>12/12</strong> regional node sectors</div>
+            <div class="metric-sub">Network health index: <strong>Optimal</strong></div>
           </div>
 
-          <!-- Card 3: Performance -->
+          <!-- Total Transactions -->
           <div class="dashboard-metric-card">
-            <h4>Avg Sync Latency</h4>
-            <div class="metric-val" style="color: var(--accent-purple);">14.5ms</div>
-            <div class="progress-bar">
-              <div class="progress-bar-fill" style="width: 75%; background: var(--accent-purple);"></div>
-            </div>
-            <div class="metric-sub">Consensus status: <strong>US-West optimal</strong></div>
-          </div>
-
-          <!-- Card 4: Keys connected -->
-          <div class="dashboard-metric-card">
-            <h4>Certified Keys</h4>
-            <div class="metric-val">FIDO2 Active</div>
+            <h4>Decentralized Transactions</h4>
+            <div class="metric-val">4.2 Billion</div>
             <div class="progress-bar">
               <div class="progress-bar-fill" style="width: 100%;"></div>
             </div>
-            <div class="metric-sub">Security keys registered: <strong>2 tokens</strong></div>
+            <div class="metric-sub">Consensus checks: <strong>5.4M / second</strong></div>
           </div>
         </div>
 
-        <!-- --- ROW 2: FILE UPLOAD ZONE & RECENT ACTIVITY --- -->
+        <!-- --- ROW 2: ACTIVE CLUSTERS & ANNOUNCEMENTS --- -->
         <div class="dashboard-grid">
           
-          <!-- Left: Recent files table -->
+          <!-- Left: Active regional sectors list -->
           <div class="dashboard-card">
             <div class="dashboard-card-header">
-              <h3>Recent Decrypted File Actions</h3>
-              <a href="dashboard-files.html" class="btn btn-secondary btn-sm" style="padding: 0.35rem 0.8rem; font-size: 0.75rem;">View All Explorer</a>
+              <h3>Active Regional Node Sectors</h3>
+              <button class="btn btn-secondary btn-sm" style="padding: 0.35rem 0.8rem; font-size: 0.75rem;" onclick="alert('Consensus check: All regional node sectors are healthy.')">Check Sectors</button>
             </div>
             <div class="dashboard-table-wrapper">
               <table class="dashboard-table">
                 <thead>
                   <tr>
-                    <th>Filename</th>
-                    <th>Size</th>
-                    <th>Date Uploaded</th>
-                    <th>Parity Nodes</th>
+                    <th>Sector Location</th>
+                    <th>Network SLA</th>
+                    <th>Average Ping</th>
                     <th>Status</th>
                   </tr>
                 </thead>
@@ -146,49 +135,45 @@
                   <tr>
                     <td>
                       <div class="file-name-cell">
-                        <i class="fa-solid fa-file-pdf"></i>
-                        <span>Q4_Financials_Encrypted.pdf</span>
+                        <i class="fa-solid fa-network-wired" style="color: var(--accent-cyan);"></i>
+                        <span>USA West Cluster (Oregon)</span>
                       </div>
                     </td>
-                    <td>12.4 MB</td>
-                    <td>2 hours ago</td>
-                    <td>12/12 active</td>
+                    <td>99.999%</td>
+                    <td>12ms</td>
                     <td><span class="status-badge">Operational</span></td>
                   </tr>
                   <tr>
                     <td>
                       <div class="file-name-cell">
-                        <i class="fa-solid fa-file-image"></i>
-                        <span>avatar_sarah.webp</span>
+                        <i class="fa-solid fa-network-wired" style="color: var(--accent-cyan);"></i>
+                        <span>Europe Central Cluster (Frankfurt)</span>
                       </div>
                     </td>
-                    <td>4.6 KB</td>
-                    <td>1 day ago</td>
-                    <td>12/12 active</td>
+                    <td>99.998%</td>
+                    <td>24ms</td>
                     <td><span class="status-badge">Operational</span></td>
                   </tr>
                   <tr>
                     <td>
                       <div class="file-name-cell">
-                        <i class="fa-solid fa-file-code"></i>
-                        <span>Dev_Stack_Configuration.yml</span>
+                        <i class="fa-solid fa-network-wired" style="color: var(--accent-cyan);"></i>
+                        <span>East Asia Cluster (Tokyo)</span>
                       </div>
                     </td>
-                    <td>8.2 KB</td>
-                    <td>2 days ago</td>
-                    <td>12/12 active</td>
+                    <td>99.999%</td>
+                    <td>32ms</td>
                     <td><span class="status-badge">Operational</span></td>
                   </tr>
                   <tr>
                     <td>
                       <div class="file-name-cell">
-                        <i class="fa-solid fa-file-zipper"></i>
-                        <span>Database_Backup_V3.tar.gz</span>
+                        <i class="fa-solid fa-network-wired" style="color: var(--accent-cyan);"></i>
+                        <span>South Asia Cluster (Singapore)</span>
                       </div>
                     </td>
-                    <td>1.4 GB</td>
-                    <td>3 days ago</td>
-                    <td>12/12 active</td>
+                    <td>99.997%</td>
+                    <td>18ms</td>
                     <td><span class="status-badge">Operational</span></td>
                   </tr>
                 </tbody>
@@ -196,21 +181,32 @@
             </div>
           </div>
 
-          <!-- Right: Upload console -->
-          <div class="dashboard-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <!-- Right: System announcements / Releases -->
+          <div class="dashboard-card">
             <div class="dashboard-card-header">
-              <h3>Upload &amp; Fragment File</h3>
+              <h3>Ecosystem Announcements</h3>
             </div>
-            <div class="dashboard-upload-zone" onclick="alert('Upload system simulation: File fragmented into 12 encrypted block slices and replicated successfully over global nodes.')">
-              <i class="fa-solid fa-cloud-arrow-up"></i>
-              <h4>Drag and drop target here</h4>
-              <p>Or click to select from local directories</p>
-              <span style="font-size: 0.75rem; color: var(--text-secondary);">Max size: 4.8 GB per sector transaction</span>
-            </div>
-            <div style="margin-top: 1.5rem; text-align: center;">
-              <span style="font-size: 0.8rem; color: var(--text-secondary);">
-                <i class="fa-solid fa-lock" style="color: var(--accent-cyan); margin-right: 4px;"></i> Client-side zero-knowledge encryption active
-              </span>
+            
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div style="background: rgba(255,255,255,0.01); border: 1px solid #1e293b; padding: 1rem; border-radius: var(--radius-xs);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                  <span style="font-weight: 700; color: #fff; font-size: 0.85rem;">Consensus Upgrade v2.4.0</span>
+                  <span style="font-size: 0.7rem; color: var(--accent-cyan); font-weight: 700;">Completed</span>
+                </div>
+                <p style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.4;">
+                  Network upgrade deployed successfully. Proof-of-storage consensus check speeds have been improved by 14%.
+                </p>
+              </div>
+
+              <div style="background: rgba(255,255,255,0.01); border: 1px solid #1e293b; padding: 1rem; border-radius: var(--radius-xs);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                  <span style="font-weight: 700; color: #fff; font-size: 0.85rem;">Security Keys Firmware Update</span>
+                  <span style="font-size: 0.7rem; color: var(--accent-purple); font-weight: 700;">New Feature</span>
+                </div>
+                <p style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.4;">
+                  Added native FIDO2 hardware token support for Chrome on Android devices, offering seamless mobile logins.
+                </p>
+              </div>
             </div>
           </div>
 

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stackly Developer Console - Developer ecosystem, SDK quickstarts, and global API health checks.">
+  <title>Main Portal | Developer Console</title>
+  
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- --- DASHBOARD FULL WORKSPACE --- -->
+  <div class="dashboard-layout">
+    
+    <!-- --- LEFT SIDEBAR DRAWER (DEVELOPER MODE) --- -->
+    <aside class="dashboard-sidebar">
+      <div style="width: 100%;">
+        <a href="index.html" class="dashboard-sidebar-logo" style="border-bottom: none; padding: 0;">
+          <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img">
+        </a>
+        <ul class="dashboard-sidebar-menu">
+          <li>
+            <a href="dev-dashboard.html">
+              <i class="fa-solid fa-code"></i> API &amp; Webhooks
+            </a>
+          </li>
+          <li>
+            <a href="dev-buckets.html">
+              <i class="fa-solid fa-cubes"></i> Bucket Clusters
+            </a>
+          </li>
+          <li>
+            <a href="dev-tokens.html">
+              <i class="fa-solid fa-key"></i> API Access Tokens
+            </a>
+          </li>
+          <li>
+            <a href="dev-portal.html" class="active">
+              <i class="fa-solid fa-globe"></i> Main Portal
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="dashboard-sidebar-footer">
+        <a href="login.html">
+          <i class="fa-solid fa-power-off"></i> Logout
+        </a>
+      </div>
+    </aside>
+
+    <!-- --- MAIN CONTENT CONSOLE --- -->
+    <div class="dashboard-main">
+      
+      <!-- --- STICKY CONSOLE HEADER --- -->
+      <header class="dashboard-header">
+        <div class="dashboard-header-left">
+          <button class="dashboard-toggle" aria-label="Open Sidebar Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="dashboard-breadcrumb">
+            Developer Console / <span>Main Portal</span>
+          </div>
+        </div>
+        
+        <div class="dashboard-header-right">
+          <div class="dashboard-user-profile">
+            <img src="assets/avatar_elena.webp" alt="Elena Rostova">
+            <span>Elena Rostova (Dev)</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- --- SCROLLABLE WORKSPACE CONTENT --- -->
+      <main class="dashboard-content">
+        
+        <!-- --- ROW 1: DEVELOPER METRICS --- -->
+        <div class="dashboard-metrics-grid">
+          <!-- API Queries -->
+          <div class="dashboard-metric-card">
+            <h4>Global SDK Queries</h4>
+            <div class="metric-val">2.4 Billion / day</div>
+            <div class="progress-bar">
+              <div class="progress-bar-fill" style="width: 80%; background: var(--accent-cyan);"></div>
+            </div>
+            <div class="metric-sub">Average request latency: <strong style="color: #10b981;">9.8ms</strong></div>
+          </div>
+          
+          <!-- SDK Instances -->
+          <div class="dashboard-metric-card">
+            <h4>Active SDK Instances</h4>
+            <div class="metric-val" style="color: var(--accent-purple);">142k Clients</div>
+            <div class="progress-bar">
+              <div class="progress-bar-fill" style="width: 100%; background: var(--accent-purple);"></div>
+            </div>
+            <div class="metric-sub">Supported languages: <strong>JS, Go, Py, Rust</strong></div>
+          </div>
+
+          <!-- Payload processed -->
+          <div class="dashboard-metric-card">
+            <h4>Decentralized API Bandwidth</h4>
+            <div class="metric-val">12.4 PB / mo</div>
+            <div class="progress-bar">
+              <div class="progress-bar-fill" style="width: 100%;"></div>
+            </div>
+            <div class="metric-sub">API packet delivery SLA: <strong>99.999%</strong></div>
+          </div>
+        </div>
+
+        <!-- --- ROW 2: SDK QUICKSTARTS & TRANSACTION FEED --- -->
+        <div class="dashboard-grid">
+          
+          <!-- Left: SDK Quickstarts list -->
+          <div class="dashboard-card">
+            <div class="dashboard-card-header">
+              <h3>Developer SDK packages</h3>
+            </div>
+            <div class="dashboard-table-wrapper">
+              <table class="dashboard-table">
+                <thead>
+                  <tr>
+                    <th>Language / Platform</th>
+                    <th>Current Version</th>
+                    <th>Install Method</th>
+                    <th>Downloads</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="file-name-cell">
+                        <i class="fa-brands fa-node-js" style="color: #68a063; font-size: 1.25rem;"></i>
+                        <span>Node.js SDK (stackly-node)</span>
+                      </div>
+                    </td>
+                    <td>v2.1.4</td>
+                    <td><code>npm install @stackly/sdk</code></td>
+                    <td>
+                      <button class="btn btn-secondary btn-sm" style="padding: 0.35rem 0.6rem; font-size: 0.75rem;" onclick="alert('Downloading Stackly Node.js SDK source package...')"><i class="fa-solid fa-download"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="file-name-cell">
+                        <i class="fa-brands fa-golang" style="color: #00add8; font-size: 1.25rem;"></i>
+                        <span>Go SDK (stackly-go)</span>
+                      </div>
+                    </td>
+                    <td>v1.8.9</td>
+                    <td><code>go get github.com/stackly/sdk</code></td>
+                    <td>
+                      <button class="btn btn-secondary btn-sm" style="padding: 0.35rem 0.6rem; font-size: 0.75rem;" onclick="alert('Downloading Stackly Go SDK source package...')"><i class="fa-solid fa-download"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="file-name-cell">
+                        <i class="fa-brands fa-python" style="color: #3776ab; font-size: 1.25rem;"></i>
+                        <span>Python Client (stackly-py)</span>
+                      </div>
+                    </td>
+                    <td>v2.0.2</td>
+                    <td><code>pip install stackly-sdk</code></td>
+                    <td>
+                      <button class="btn btn-secondary btn-sm" style="padding: 0.35rem 0.6rem; font-size: 0.75rem;" onclick="alert('Downloading Stackly Python SDK source package...')"><i class="fa-solid fa-download"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="file-name-cell">
+                        <i class="fa-brands fa-rust" style="color: #e44d26; font-size: 1.25rem;"></i>
+                        <span>Rust Crate (stackly-rust)</span>
+                      </div>
+                    </td>
+                    <td>v1.0.0</td>
+                    <td><code>cargo add stackly</code></td>
+                    <td>
+                      <button class="btn btn-secondary btn-sm" style="padding: 0.35rem 0.6rem; font-size: 0.75rem;" onclick="alert('Downloading Stackly Rust SDK source package...')"><i class="fa-solid fa-download"></i></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Right: Real-time network telemetry logs -->
+          <div class="dashboard-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="dashboard-card-header">
+              <h3>Live Consensus Feed</h3>
+            </div>
+            
+            <div style="background: #040814; border: 1px solid #1e293b; border-radius: 4px; padding: 1rem; min-height: 230px; font-family: monospace; font-size: 0.75rem; color: #10b981; overflow-y: auto; overflow-x: auto; white-space: pre-wrap;">
+<span style="color: var(--text-secondary);">[Listening on shard telemetry...]</span>
+<div id="dev-telemetry-log">Connection established.
+[10:38:02] consensus: check complete on shard US-West-1a
+[10:38:04] transaction: block 4,891,098 validated (12 node agreement)
+[10:38:09] replication: slice check complete (replica count stable)</div>
+            </div>
+
+            <button class="btn btn-secondary btn-sm" style="width: 100%;" onclick="
+              const logEl = document.getElementById('dev-telemetry-log');
+              logEl.innerHTML += '\n[' + new Date().toLocaleTimeString() + '] telemetry: API handshake completed with Frankfurt shard\n[' + new Date().toLocaleTimeString() + '] consensus: health index at 1.0';
+              logEl.scrollTop = logEl.scrollHeight;
+            ">
+              <i class="fa-solid fa-arrows-rotate"></i> Poll Latest Shard Telemetry
+            </button>
+          </div>
+
+        </div>
+
+      </main>
+    </div>
+
+  </div>
+
+  <!-- JavaScript Link -->
+  <script src="script.js"></script>
+</body>
+</html>
