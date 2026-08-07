@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
       localStorage.setItem('est_users', usersVal);
       localStorage.setItem('est_billing', billingCycle);
 
-      window.location.href = 'contact.html';
+      window.location.href = '404.html';
     });
   }
 
