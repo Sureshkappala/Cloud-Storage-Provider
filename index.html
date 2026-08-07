@@ -513,10 +513,10 @@
           <p style="margin-bottom: 1.25rem;">
             Get quarterly cloud storage updates and exclusive early-bird product announcements.
           </p>
-          <div class="footer-newsletter-wrap">
-            <input type="email" placeholder="Your Email">
-            <button type="button" onclick="window.location.href='404.html'">Join</button>
-          </div>
+          <form class="footer-newsletter-wrap" onsubmit="event.preventDefault(); if(this.querySelector('input').value) { alert('Subscribed successfully! Thank you for joining Stackly.'); this.reset(); }" style="display: flex; gap: 0.5rem; width: 100%;">
+            <input type="email" placeholder="Your Email" required style="flex: 1; padding: 0.6rem 0.8rem; background: rgba(4, 8, 20, 0.8); border: 1px solid #1c4e32; border-radius: 4px; color: #fff; font-size: 0.88rem; outline: none;">
+            <button type="submit" style="padding: 0.6rem 1.2rem; background: var(--accent-cyan); color: #040814; border: none; border-radius: 4px; font-weight: 700; font-size: 0.88rem; cursor: pointer; transition: all 0.2s;">Join</button>
+          </form>
         </div>
       </div>
 
