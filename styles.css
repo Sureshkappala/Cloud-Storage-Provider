@@ -123,7 +123,7 @@ input, button, select, textarea {
 }
 
 .section {
-  padding: 7rem 0;
+  padding: 8.5rem 0;
   position: relative;
 }
 
@@ -475,7 +475,8 @@ input, button, select, textarea {
 
 /* --- FLOATING CLOUD ESTIMATION SEARCH FORM --- */
 .estimation-container {
-  margin-top: -80px;
+  margin-top: -45px;
+  margin-bottom: 6rem;
   position: relative;
   z-index: 10;
 }
@@ -1913,6 +1914,7 @@ textarea.form-control {
   .estimation-container {
     margin-top: 0;
     padding-top: 2rem;
+    margin-bottom: 4rem;
   }
   
   .estimation-form {
