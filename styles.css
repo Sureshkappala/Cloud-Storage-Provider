@@ -259,14 +259,14 @@ input, button, select, textarea {
   width: 100%;
   z-index: 1000;
   background: var(--bg-nav);
-  border-bottom: 1px solid #1c4e32;
+  border-bottom: 2px solid var(--accent-cyan);
   transition: padding var(--transition-fast);
   padding: 1.25rem 0;
 }
 
 .header.scrolled {
   padding: 0.85rem 0;
-  border-bottom: 1px solid rgba(0, 229, 255, 0.3);
+  border-bottom: 2px solid var(--accent-cyan);
   background: #0c2b1a;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
@@ -2183,7 +2183,7 @@ textarea.form-control {
 .dashboard-header {
   height: 70px;
   background: #123d25;
-  border-bottom: 1px solid #1c4e32;
+  border-bottom: 2px solid var(--accent-cyan);
   padding: 0 2rem;
   display: flex;
   align-items: center;
